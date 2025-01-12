@@ -90,3 +90,10 @@ html {
     --ring: 0 0% 100%;
   }
 }
+
+.hero-section {
+  background-image: url(./../assets/bg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
