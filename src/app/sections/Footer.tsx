@@ -103,11 +103,7 @@ export function Footer() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent animate-pulse" />
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()}{" "}
-              <span className="font-medium text-gray-800 dark:text-gray-200">
-                Aníbal Alpízar
-              </span>
-              . For free use.
+             {"Made with 💖 by Abbas Bhanpura wala"}
             </p>
           </motion.div>
         </div>
