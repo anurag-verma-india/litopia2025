@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Shadcn landing page",
-  description: "Landing page for free and open source software",
+  title: "Litopia",
+  description: "Landing page for litopia 2025",
 };
 
 export default function RootLayout({
