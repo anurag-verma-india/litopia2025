@@ -1,48 +1,30 @@
-# 🚀 Shadcn/ui landing 
-
-A modern, fast, and user-friendly landing page built with cutting-edge frontend technologies. Perfect for developers who want to kickstart their projects with a solid foundation.
-
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="https://github.com/user-attachments/assets/c10a943f-efa8-4024-b0bb-5eca2402f52e" alt="Node.js" width="400">
-  <img src="https://github.com/user-attachments/assets/c79c7102-3968-4e04-9221-22560e0cabab" alt="JavaScript" width="400">
-</div>
-
-## 🌐 Live Demo
-
-Check out the live demo: [View Demo](https://nextjs-shadcn-landing.vercel.app)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://nextjs-shadcn-landing.vercel.app)
-
-
-## ✨ Features
-
-- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
-- 🎨 **Modern UI/UX** - Clean and intuitive interface with smooth animations
-- ⚡ **Lightning Fast** - Optimized for speed with Next.js
-- 🎯 **Type-Safe** - Built with TypeScript for better development experience
-- 🎨 **Beautiful Components** - Pre-built components from shadcn/ui
+# 🚀 Litopia 2025 landing Page
 
 ## 🛠️ Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/anibalalpizar/nextjs-shadcn-landing.git
+git clone https://github.com/Abbas-Dev-786/litopia.git
 ```
 
 2. Install dependencies:
+
 ```bash
-cd nextjs-shadcn-landing
+cd litopia
 npm install
 ```
 
 ## 🚀 Usage
 
 Start the development server:
+
 ```bash
 npm run dev
 ```
 
 Build for production:
+
 ```bash
 npm run build
 ```
@@ -50,9 +32,10 @@ npm run build
 ## 💻 Code Examples
 
 ### Component Usage
+
 ```tsx
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 function HeroSection() {
   return (
@@ -61,7 +44,7 @@ function HeroSection() {
       <p className="mt-2 text-gray-600">Start building something amazing!</p>
       <Button className="mt-4">Get Started</Button>
     </Card>
-  )
+  );
 }
 ```
 
@@ -105,7 +88,3 @@ Our landing page is built with modern frontend technologies:
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-⭐️ If you found this project helpful, please give it a star!
