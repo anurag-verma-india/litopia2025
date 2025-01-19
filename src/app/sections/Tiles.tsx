@@ -112,7 +112,8 @@ const InteractiveTiles = () => {
         "h h"
       `,
             columns: "repeat(2, 1fr)",
-            rows: "repeat(5, minmax(100px, auto))",
+            rows: "repeat(5, minmax(75px, auto))",
+            // rows: "repeat(5, 75px)",
         },
     };
 
