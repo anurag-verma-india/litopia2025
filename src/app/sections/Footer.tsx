@@ -1,113 +1,83 @@
-"use client";
+import React from "react";
+import Image from "next/image";
+import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import img from "@/assets/logo.webp";
 
-import type { SocialLinkProps } from "@/types";
-import { motion } from "framer-motion";
-import { ExternalLink, Github, Linkedin, Mail } from "lucide-react";
-
-const socialLinks: SocialLinkProps[] = [
-  {
-    name: "Email",
-    href: "mailto:anibal.alpizar14@gmail.com",
-    icon: Mail,
-    lightColor: "hover:text-red-600",
-    darkColor: "dark:hover:text-red-400",
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/anibalalpizar",
-    icon: Linkedin,
-    lightColor: "hover:text-blue-600",
-    darkColor: "dark:hover:text-blue-400",
-  },
-  {
-    name: "GitHub",
-    href: "https://github.com/anibalalpizar",
-    icon: Github,
-    lightColor: "hover:text-gray-800",
-    darkColor: "dark:hover:text-gray-200",
-  },
-];
-
-const footerVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-};
-
-export function Footer() {
+export const Footer = () => {
   return (
-    <footer className="relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-20" />
-      </div>
-      <motion.div
-        className="container relative z-10 mx-auto px-4 py-20"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={footerVariants}
-      >
-        <div className="max-w-4xl mx-auto">
-          <motion.div className="text-center mb-12" variants={itemVariants}>
-            <div className="inline-block mb-6"></div>
-            <h2 className="text-4xl font-bold mb-4 dark:text-white text-gray-900">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-pink-600 dark:from-cyan-600 dark:to-cyan-700">
-                Get in touch
-              </span>
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg">
-              Feel free to reach out if you have any questions or inquiries.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="flex flex-wrap justify-center gap-8 mb-12"
-            variants={itemVariants}
-          >
-            {socialLinks.map((link) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group flex items-center justify-center text-center gap-2 p-3 rounded-lg bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-all duration-300 ${link.lightColor} ${link.darkColor}`}
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <link.icon className="w-5 h-5" />
-                <span className="font-medium text-gray-800 text-center dark:text-gray-200">
-                  {link.name}
-                </span>
-                <ExternalLink className="w-4 h-4 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />
-              </motion.a>
-            ))}
-          </motion.div>
-
-          <motion.div className="text-center" variants={itemVariants}>
-            <div className="relative h-px mb-8">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent animate-pulse" />
+    <footer className="w-full bg-zinc-900/80 border-t border-theme-gold/10">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+          {/* Logo and Description */}
+          <div className="flex flex-col items-center md:items-start space-y-4 md:max-w-sm">
+            <div className="relative w-32 h-32">
+              <Image
+                src={img}
+                alt="Litopia Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-             {"Made with 💖 by Abbas Bhanpura wala"}
+            <p className="text-gray-300 text-center md:text-left">
+              Empowering literary minds and fostering creativity through
+              community engagement.
             </p>
-          </motion.div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="flex flex-col items-center md:items-start space-y-4">
+            <h3 className="text-xl font-semibold text-theme-gold">
+              Contact Us
+            </h3>
+            <div className="flex flex-col items-center md:items-start space-y-2">
+              <a
+                href="mailto:contact@litopia.com"
+                className="flex items-center space-x-2 text-gray-300 hover:text-theme-gold transition-colors"
+              >
+                <Mail className="w-5 h-5" />
+                <span>contact@litopia.com</span>
+              </a>
+              <a
+                href="tel:+1234567890"
+                className="flex items-center space-x-2 text-gray-300 hover:text-theme-gold transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                <span>+91 123 456 7890</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex flex-col items-center md:items-start space-y-4">
+            <h3 className="text-xl font-semibold text-theme-gold">Follow Us</h3>
+            <div className="flex items-center space-x-4">
+              <a
+                href="#"
+                className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5 text-theme-gold" />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5 text-theme-gold" />
+              </a>
+            </div>
+          </div>
         </div>
-      </motion.div>
+
+        {/* Copyright */}
+        <div className="mt-12 pt-8 border-t border-theme-gold/10">
+          <p className="text-center text-gray-300 text-sm">
+            &copy; {new Date().getFullYear()} The Sahityik. All rights are
+            reserved.
+          </p>
+        </div>
+      </div>
     </footer>
   );
-}
+};
+
+export default Footer;
