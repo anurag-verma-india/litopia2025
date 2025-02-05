@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Litopia",
-  description: "Landing page for litopia 2025",
+  title: "Litopia 2.0",
+  description: "Landing page for litopia 2.0",
 };
 
 export default function RootLayout({

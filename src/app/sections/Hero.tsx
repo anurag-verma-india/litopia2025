@@ -4,9 +4,9 @@ import type { AnimatedProps } from "@/types/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import LitopiaLogo from "./../../assets/logo.webp";
-import MedicapsLogo from "./../../assets/medicaps_logo.png";
+import MedicapsDarkLogo from "./../../assets/medicaps_dark_logo.png";
 import YearsLogo from "./../../assets/logo_25.png";
-import SahityikLogo from "./../../assets/sahityik_logo.png";
+import SahityikDarkLogo from "./../../assets/sahityik_light_logo.png";
 
 export function Hero({ id }: AnimatedProps) {
   return (
@@ -67,7 +67,7 @@ export function Hero({ id }: AnimatedProps) {
               width={100}
               // height={500}
               alt="Medicaps Logo"
-              src={MedicapsLogo}
+              src={MedicapsDarkLogo}
             />
           </motion.div>
           <motion.div
@@ -97,7 +97,7 @@ export function Hero({ id }: AnimatedProps) {
               width={100}
               // height={500}
               alt="Sahityik Logo"
-              src={SahityikLogo}
+              src={SahityikDarkLogo}
             />
           </motion.div>
         </div>
