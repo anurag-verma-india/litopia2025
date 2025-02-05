@@ -8,6 +8,8 @@ import Tiles from "./sections/Tiles";
 import { InfoSection } from "./sections/InfoSection";
 import { Events } from "./sections/Events";
 import { ProfileSection } from "./sections/ProfileSection";
+import { TeamSection } from "./sections/TeamSection";
+import { Footer } from "./sections/Footer";
 
 export default function Home() {
   return (
@@ -17,11 +19,8 @@ export default function Home() {
       <Events />
       <Tiles />
       <ProfileSection />
-      {/* <Benefits id="benefits" />
-            <Sponsors id="investors" />
-            <Testimonials id="testimonials" />
-            <FAQ id="faq" />
-            <Footer /> */}
+      <TeamSection />
+      <Footer />
     </div>
   );
 }
