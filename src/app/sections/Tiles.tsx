@@ -101,9 +101,9 @@ const InteractiveTiles = () => {
   };
 
   return (
-    <section className="w-full py-12 px-4 bg-zinc-900/50">
+    <section className="w-full py-16 px-4 bg-zinc-900/50">
       {/* Section Title */}
-      <div className="text-center mb-16">
+      {/* <div className="text-center mb-16">
         <h2
           className={`text-4xl md:text-5xl font-bold ${currentTheme.text} mb-4`}
         >
@@ -113,7 +113,7 @@ const InteractiveTiles = () => {
           Discover our exciting lineup of events and activities designed to
           inspire, engage, and connect our community.
         </p>
-      </div>
+      </div> */}
 
       <div
         className={`max-w-7xl mx-auto rounded-3xl p-8 md:p-12 transition-all duration-300 border ${currentTheme.border} ${currentTheme.bg}`}
