@@ -1,306 +1,199 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-
-const tiles = [
-    {
-        id: 1,
-        text: "Speaker Session",
-        gridArea: { desktop: "speaker", mobile: "a" },
-        emoji: "🎤",
-        imageUrl: "",
-        title: "Title 1",
-        description: "Description 1",
-    },
-    {
-        id: 2,
-        text: "Medicaps Ki Aadalat",
-        gridArea: { desktop: "medicaps", mobile: "b" },
-        emoji: "⚖️",
-        imageUrl: "",
-        title: "Title 2",
-        description: "Description 2",
-    },
-    {
-        id: 3,
-        text: "Bookmarked Meeting",
-        gridArea: { desktop: "bookmarked", mobile: "c" },
-        emoji: "📑",
-        imageUrl: "",
-        title: "Title 3",
-        description: "Description 3",
-    },
-    {
-        id: 4,
-        text: "Kite Festival",
-        gridArea: { desktop: "kite", mobile: "d" },
-        emoji: "🪁",
-        imageUrl: "",
-        title: "Title 4",
-        description: "Description 4",
-    },
-    {
-        id: 5,
-        text: "Harry Potter Quiz",
-        gridArea: { desktop: "harry", mobile: "e" },
-        emoji: "⚡",
-        imageUrl: "",
-        title: "Title 5",
-        description: "Description 5",
-    },
-    {
-        id: 6,
-        text: "Podcast",
-        gridArea: { desktop: "podcast", mobile: "f" },
-        emoji: "🎧",
-        imageUrl: "",
-        title: "Title 6",
-        description: "Description 6",
-    },
-    {
-        id: 7,
-        text: "Detective Game",
-        gridArea: { desktop: "detective", mobile: "g" },
-        emoji: "🔍",
-        imageUrl: "",
-        title: "Title 7",
-        description: "Description 7",
-    },
-    {
-        id: 8,
-        text: "Open Mic",
-        gridArea: { desktop: "mic", mobile: "h" },
-        emoji: "🎭",
-        imageUrl: "",
-        title: "Title 8",
-        description: "Description 8",
-    },
-];
+import { tiles } from "@/constants";
 
 const InteractiveTiles = () => {
-    const { theme } = useTheme();
-    const [hoveredText, setHoveredText] = useState("");
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isMobile, setIsMobile] = useState(false);
-    const [selectedText, setSelectedText] = useState("");
-    const [isHovering, setIsHovering] = useState(false);
+  const { theme } = useTheme();
+  const [hoveredText, setHoveredText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [selectedText, setSelectedText] = useState("");
+  const [isHovering, setIsHovering] = useState(false);
 
-    const dualTheme = {
-        light: {
-            bg: "bg-[#F7E8F4]",
-            tile: "bg-gradient-to-br from-[#EDC7E4] to-[#D7AAF2]",
-            text: "text-[#4A2D5F]",
-            border: "border-[#D7AAF2]",
-            gradient: "from-[#EDC7E4] to-[#D7AAF2]",
-            hover: "hover:opacity-90",
-            shadow: "shadow-[#D7AAF2]/20",
-        },
-        dark: {
-            bg: "bg-[#2D1B38]",
-            tile: "bg-gradient-to-br from-[#8E6B89] to-[#8666B9]",
-            text: "text-[#EDC7E4]",
-            border: "border-[#EDC7E4]",
-            gradient: "from-[#8E6B89] to-[#8666B9]",
-            hover: "hover:opacity-90",
-            shadow: "shadow-[#EDC7E4]/10",
-        },
+  const dualTheme = {
+    light: {
+      bg: "bg-zinc-900",
+      tile: "bg-gradient-to-br from-theme-red/10 to-theme-gold/10",
+      text: "text-theme-gold",
+      border: "border-theme-gold/10",
+      hover:
+        "hover:shadow-xl hover:scale-[1.02] hover:from-theme-red/15 hover:to-theme-gold/15",
+      shadow: "shadow-lg shadow-theme-gold/5",
+      description: "text-gray-300",
+    },
+    dark: {
+      bg: "bg-zinc-900",
+      tile: "bg-gradient-to-br from-theme-red/10 to-theme-gold/10",
+      text: "text-theme-gold",
+      border: "border-theme-gold/10",
+      hover:
+        "hover:shadow-xl hover:scale-[1.02] hover:from-theme-red/15 hover:to-theme-gold/15",
+      shadow: "shadow-lg shadow-theme-gold/5",
+      description: "text-gray-300",
+    },
+  };
+
+  const currentTheme = theme === "dark" ? dualTheme.dark : dualTheme.light;
+
+  // Desktop and Mobile grid layouts
+  const gridLayouts = {
+    desktop: {
+      areas: `
+                "speaker medicaps medicaps kite"
+                "speaker bookmarked harry harry"
+                "podcast detective mic mic"
+            `,
+      columns: "repeat(4, 1fr)",
+      rows: "repeat(3, minmax(180px, auto))",
+    },
+    mobile: {
+      areas: `
+                "a"
+                "b"
+                "c"
+                "d"
+                "e"
+                "f"
+                "g"
+                "h"
+            `,
+      columns: "1fr",
+      rows: "repeat(8, minmax(120px, auto))",
+    },
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
     };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    const currentTheme = theme === "dark" ? dualTheme.dark : dualTheme.light;
+  useEffect(() => {
+    if (!isHovering && !selectedText) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % tiles.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [isHovering, selectedText]);
 
-    // Desktop and Mobile grid layouts
-    const gridLayouts = {
-        desktop: {
-            areas: `
-        "speaker medicaps medicaps kite"
-        "speaker bookmarked harry harry"
-        "podcast detective mic mic"
-      `,
-            columns: "repeat(4, 1fr)",
-            rows: "repeat(3, minmax(120px, auto))",
-        },
-        mobile: {
-            areas: `
-        "a b"
-        "c d"
-        "e e"
-        "f g"
-        "h h"
-      `,
-            columns: "repeat(2, 1fr)",
-            rows: "repeat(5, minmax(75px, auto))",
-            // rows: "repeat(5, 75px)",
-        },
-    };
+  const handleTileClick = (text: string) => {
+    setSelectedText(text === selectedText ? "" : text);
+  };
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  const handleMouseEnter = (text: string) => {
+    setHoveredText(text);
+    setIsHovering(true);
+  };
 
-    useEffect(() => {
-        if (!isHovering && !selectedText) {
-            const interval = setInterval(() => {
-                setCurrentIndex((prevIndex) => (prevIndex + 1) % tiles.length);
-            }, 3000);
-            return () => clearInterval(interval);
-        }
-    }, [isHovering, selectedText]);
+  const handleMouseLeave = () => {
+    setHoveredText("");
+    setIsHovering(false);
+  };
 
-    const handleTileClick = (text: string) => {
-        if (isMobile) {
-            setSelectedText(text);
-        }
-    };
+  const getCurrentContent = () => {
+    const currentText = hoveredText || selectedText || tiles[currentIndex].text;
+    return tiles.find((tile) => tile.text === currentText) || tiles[0];
+  };
 
-    const handleMouseEnter = (text: string) => {
-        setHoveredText(text);
-        setIsHovering(true);
-    };
-
-    const handleMouseLeave = () => {
-        setHoveredText("");
-        setIsHovering(false);
-    };
-
-    const getCurrentContent = () => {
-        const currentText =
-            hoveredText || selectedText || tiles[currentIndex].text;
-        const currentTile = tiles.find((tile) => tile.text === currentText);
-        return currentTile;
-    };
-
-    return (
-        <div
-            className={`p-6 ${currentTheme.bg} rounded-lg max-w-4xl mx-auto transition-colors duration-300`}
+  return (
+    <section className="w-full py-12 px-4 bg-zinc-900/50">
+      {/* Section Title */}
+      <div className="text-center mb-16">
+        <h2
+          className={`text-4xl md:text-5xl font-bold ${currentTheme.text} mb-4`}
         >
-            <div
-                className="grid gap-4 mb-6"
-                style={{
-                    gridTemplateAreas: isMobile
-                        ? gridLayouts.mobile.areas
-                        : gridLayouts.desktop.areas,
-                    gridTemplateColumns: isMobile
-                        ? gridLayouts.mobile.columns
-                        : gridLayouts.desktop.columns,
-                    gridTemplateRows: isMobile
-                        ? gridLayouts.mobile.rows
-                        : gridLayouts.desktop.rows,
-                }}
-            >
-                {tiles.map((tile) => (
-                    <div
-                        key={tile.id}
-                        style={{
-                            gridArea: isMobile
-                                ? tile.gridArea.mobile
-                                : tile.gridArea.desktop,
-                            backgroundImage: tile.imageUrl
-                                ? `url(${tile.imageUrl})`
-                                : "none",
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                        }}
-                        className={`
-              ${currentTheme.tile} 
-              rounded-lg p-4 cursor-pointer 
-              ${currentTheme.hover} 
-              transition-all duration-300 
-              shadow-lg hover:shadow-xl 
-              ${currentTheme.shadow}
-              relative 
-              overflow-hidden
-              group
-              min-h-[100px]
-            rows: "repeat(5, minmax(7))",
-            `}
-                        onMouseEnter={() => handleMouseEnter(tile.text)}
-                        onMouseLeave={handleMouseLeave}
-                        onClick={() => handleTileClick(tile.text)}
-                    >
-                        {!tile.imageUrl && (
-                            <div className="absolute inset-0 flex items-center justify-center opacity-20 group-hover:opacity-30 transition-opacity">
-                                <span className="text-7xl transform-gpu scale-100 group-hover:scale-110 transition-transform duration-300">
-                                    {tile.emoji}
-                                </span>
-                            </div>
-                        )}
-                        <div
-                            className={`
-              absolute inset-0 
-              ${tile.imageUrl ? "bg-black/40" : ""} 
-              group-hover:bg-black/50 
-              transition-all duration-300
-            `}
-                        />
-                        <p
-                            className={`${currentTheme.text} font-bold relative z-10 text-lg`}
-                        >
-                            {tile.text}
-                        </p>
-                    </div>
-                ))}
-            </div>
+          Our Events
+        </h2>
+        <p className={`text-xl ${currentTheme.description} max-w-3xl mx-auto`}>
+          Discover our exciting lineup of events and activities designed to
+          inspire, engage, and connect our community.
+        </p>
+      </div>
 
-            {/* Display Section */}
+      <div
+        className={`container mx-auto rounded-3xl p-8 md:p-12 transition-all duration-300 border ${currentTheme.border} ${currentTheme.bg}`}
+      >
+        <div
+          className="grid gap-6 mb-12"
+          style={{
+            gridTemplateAreas: isMobile
+              ? gridLayouts.mobile.areas
+              : gridLayouts.desktop.areas,
+            gridTemplateColumns: isMobile
+              ? gridLayouts.mobile.columns
+              : gridLayouts.desktop.columns,
+            gridTemplateRows: isMobile
+              ? gridLayouts.mobile.rows
+              : gridLayouts.desktop.rows,
+          }}
+        >
+          {tiles.map((tile) => (
             <div
-                className={`
-        h-32 relative overflow-hidden
-        rounded-lg mb-6 
-        flex items-center justify-center 
-        border-2 ${currentTheme.border}
-        shadow-lg 
-        ${currentTheme.shadow}
-        transition-all duration-300
-        ${currentTheme.tile}
-      `}
+              key={tile.id}
+              style={{
+                gridArea: isMobile
+                  ? tile.gridArea.mobile
+                  : tile.gridArea.desktop,
+              }}
+              className={`
+                ${currentTheme.tile} 
+                rounded-2xl p-8
+                cursor-pointer 
+                ${currentTheme.hover}
+                transition-all duration-500
+                ${currentTheme.shadow}
+                relative 
+                overflow-hidden
+                group
+                border ${currentTheme.border}
+                ${
+                  hoveredText === tile.text || selectedText === tile.text
+                    ? "scale-[1.02] shadow-2xl from-theme-red/20 to-theme-gold/20"
+                    : ""
+                }
+                after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/10 after:to-transparent after:pointer-events-none
+              `}
+              onMouseEnter={() => handleMouseEnter(tile.text)}
+              onMouseLeave={handleMouseLeave}
+              onClick={() => handleTileClick(tile.text)}
             >
-                {getCurrentContent() && (
-                    <>
-                        {getCurrentContent()!.imageUrl ? (
-                            <div
-                                className="absolute inset-0 bg-center bg-cover opacity-50"
-                                style={{
-                                    backgroundImage: `url(${
-                                        getCurrentContent()!.imageUrl
-                                    })`,
-                                }}
-                            />
-                        ) : (
-                            <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                                <span className="text-4xl">
-                                    {getCurrentContent()!.emoji}
-                                </span>
-                            </div>
-                        )}
-                    </>
-                )}
-                <p
-                    className={`${currentTheme.text} text-lg font-bold relative z-10 transition-all duration-300`}
-                >
-                    {hoveredText || selectedText || tiles[currentIndex].text}
-                </p>
+              <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity">
+                <span className="text-7xl transform-gpu scale-100 group-hover:scale-110 transition-transform duration-300">
+                  {tile.emoji}
+                </span>
+              </div>
+              <p
+                className={`${currentTheme.text} font-bold relative z-10 text-xl md:text-2xl`}
+              >
+                {tile.text}
+              </p>
             </div>
-
-            {/* Heading Section */}
-            <div>
-                <h2 className={`text-4xl font-bold ${currentTheme.text} mb-4`}>
-                    {/* Heading */}
-                    {getCurrentContent()!.title}
-                </h2>
-                <p className={`${currentTheme.text} opacity-90`}>
-                    {/* Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industrys
-                    standard dummy text ever since the 1500s. */}
-                    {getCurrentContent()!.description}
-                </p>
-            </div>
+          ))}
         </div>
-    );
+
+        {/* Content Display Section */}
+        <div
+          className={`space-y-6 transition-all duration-300 p-8 rounded-2xl border ${currentTheme.border} ${currentTheme.tile}`}
+        >
+          <h2
+            className={`text-3xl md:text-4xl font-bold ${currentTheme.text} tracking-tight`}
+          >
+            {getCurrentContent().title}
+          </h2>
+          <p
+            className={`${currentTheme.description} text-lg md:text-xl leading-relaxed`}
+          >
+            {getCurrentContent().description}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default InteractiveTiles;
