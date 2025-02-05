@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import img from "@/assets/logo.webp";
+import { motion } from "framer-motion";
 
 const teamMembers = [
   {
@@ -55,9 +56,15 @@ const teamMembers = [
   },
 ];
 
-const TeamCard = ({ member }: { member: typeof teamMembers[0] }) => {
+const TeamCard = ({ member, index }: { member: typeof teamMembers[0]; index: number }) => {
   return (
-    <div className="group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-theme-gold/10 transition-all duration-300 hover:border-theme-gold/20">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-theme-gold/10 transition-all duration-300 hover:border-theme-gold/20"
+    >
       {/* Image Container */}
       <div className="relative h-64 w-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-10" />
@@ -93,7 +100,7 @@ const TeamCard = ({ member }: { member: typeof teamMembers[0] }) => {
           {member.role}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -101,20 +108,26 @@ export const TeamSection = () => {
   return (
     <section className="w-full py-16 px-4 bg-zinc-900/50">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto text-center mb-16">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="max-w-7xl mx-auto text-center mb-16"
+      >
         <h2 className="text-4xl md:text-5xl font-bold text-theme-gold mb-4">
           Meet Our Team
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           The passionate individuals behind Litopia who work tirelessly to bring literature to life.
         </p>
-      </div>
+      </motion.div>
 
       {/* Team Grid */}
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member) => (
-            <TeamCard key={member.id} member={member} />
+          {teamMembers.map((member, index) => (
+            <TeamCard key={member.id} member={member} index={index} />
           ))}
         </div>
       </div>

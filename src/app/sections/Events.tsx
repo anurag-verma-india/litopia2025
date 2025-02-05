@@ -2,18 +2,24 @@
 import React from "react";
 import Image from "next/image";
 import { events } from "@/constants";
+import { motion } from "framer-motion";
 
-const EventCard = ({ event }: { event: (typeof events)[0] }) => {
+const EventCard = ({ event, index }: { event: (typeof events)[0]; index: number }) => {
   return (
-    <div className="group relative flex flex-col h-full overflow-hidden rounded-2xl border border-theme-gold/10 bg-zinc-900/50 transition-all duration-300 hover:border-theme-gold/20">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="group relative flex flex-col h-full overflow-hidden rounded-2xl border border-theme-gold/10 bg-zinc-900/50 transition-all duration-300 hover:border-theme-gold/20"
+    >
       {/* Image Container */}
-      <div className="relative h-48 w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent opacity-50 z-10" />
+      <div className="relative h-64 w-full overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-10" />
         <Image
           src={event.image}
           alt={event.title}
-          // fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
         <div className="absolute top-4 right-4 z-20">
           <span className="px-3 py-1 text-sm rounded-full bg-theme-red/20 text-theme-gold border border-theme-gold/10">
@@ -25,7 +31,7 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
       {/* Content */}
       <div className="flex flex-col flex-grow p-6 space-y-4">
         <div className="space-y-2">
-          <h3 className="text-2xl font-bold text-theme-gold">{event.title}</h3>
+          <h3 className="text-xl font-bold text-theme-gold">{event.title}</h3>
           <p className="text-sm text-theme-gold/70">{event.date}</p>
         </div>
         <p className="text-gray-300 flex-grow">{event.description}</p>
@@ -35,7 +41,7 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
           Register
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -43,7 +49,13 @@ export const Events = () => {
   return (
     <section className="w-full py-12 px-4 bg-zinc-900/50">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto text-center mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="max-w-7xl mx-auto text-center mb-16"
+      >
         <h2 className="text-4xl md:text-5xl font-bold text-theme-gold mb-4">
           Events
         </h2>
@@ -51,13 +63,13 @@ export const Events = () => {
           Join us for these exciting events that celebrate literature,
           creativity, and community.
         </p>
-      </div>
+      </motion.div>
 
       {/* Events Grid */}
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {events.map((event) => (
-            <EventCard key={event.id} event={event} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {events.map((event, index) => (
+            <EventCard key={event.id} event={event} index={index} />
           ))}
         </div>
       </div>

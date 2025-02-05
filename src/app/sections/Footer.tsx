@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import img from "@/assets/logo.webp";
+import { motion } from "framer-motion";
 
 export const Footer = () => {
   return (
@@ -9,7 +11,13 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
           {/* Logo and Description */}
-          <div className="flex flex-col items-center md:items-start space-y-4 md:max-w-sm">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col items-center md:items-start space-y-4 md:max-w-sm"
+          >
             <div className="relative w-32 h-32">
               <Image
                 src={img}
@@ -21,10 +29,16 @@ export const Footer = () => {
               Empowering literary minds and fostering creativity through
               community engagement.
             </p>
-          </div>
+          </motion.div>
 
           {/* Contact Information */}
-          <div className="flex flex-col items-center md:items-start space-y-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col items-center md:items-start space-y-4"
+          >
             <h3 className="text-xl font-semibold text-theme-gold">
               Contact Us
             </h3>
@@ -44,10 +58,16 @@ export const Footer = () => {
                 <span>+91 123 456 7890</span>
               </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Social Links */}
-          <div className="flex flex-col items-center md:items-start space-y-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col items-center md:items-start space-y-4"
+          >
             <h3 className="text-xl font-semibold text-theme-gold">Follow Us</h3>
             <div className="flex items-center space-x-4">
               <a
@@ -65,16 +85,22 @@ export const Footer = () => {
                 <Linkedin className="w-5 h-5 text-theme-gold" />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-theme-gold/10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-12 pt-8 border-t border-theme-gold/10"
+        >
           <p className="text-center text-gray-300 text-sm">
             &copy; {new Date().getFullYear()} The Sahityik. All rights are
             reserved.
           </p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
