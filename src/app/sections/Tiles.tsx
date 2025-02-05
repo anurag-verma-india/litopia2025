@@ -116,7 +116,7 @@ const InteractiveTiles = () => {
       </div>
 
       <div
-        className={`container mx-auto rounded-3xl p-8 md:p-12 transition-all duration-300 border ${currentTheme.border} ${currentTheme.bg}`}
+        className={`max-w-7xl mx-auto rounded-3xl p-8 md:p-12 transition-all duration-300 border ${currentTheme.border} ${currentTheme.bg}`}
       >
         <div
           className="grid gap-6 mb-12"
