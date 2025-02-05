@@ -6,12 +6,14 @@ import { Hero } from "./sections/Hero";
 // import { Testimonials } from "./sections/Testimonials";
 import Tiles from "./sections/Tiles";
 import { InfoSection } from "./sections/InfoSection";
+import { Events } from "./sections/Events";
 
 export default function Home() {
     return (
         <div className="min-h-screen bg-background transition-colors duration-300">
             <Hero id="top" />
-            <InfoSection />
+            <InfoSection id="about" />
+            <Events />
             <Tiles />
             {/* <Benefits id="benefits" />
             <Sponsors id="investors" />

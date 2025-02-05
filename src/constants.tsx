@@ -1,5 +1,6 @@
 import { PhoneCall, PartyPopper, Users, SquareChartGantt } from "lucide-react";
 import { INavigationItems } from "./types/navigation";
+import img from "@/assets/logo.webp";
 
 const navigationIconClass = "w-4 h-4";
 export const navigationItems: INavigationItems[] = [
@@ -105,5 +106,62 @@ export const tiles = [
     title: "Open Mic Night",
     description:
       "Share your talents and creativity at our open mic events featuring poetry, music, and performances.",
+  },
+];
+
+export const events = [
+  {
+    id: 1,
+    title: "Literary Week",
+    date: "March 15-21, 2024",
+    description:
+      "A week-long celebration of literature featuring workshops, author talks, and interactive sessions.",
+    image: img,
+    tag: "Upcoming",
+  },
+  {
+    id: 2,
+    title: "Poetry Slam",
+    date: "April 5, 2024",
+    description:
+      "Express yourself through poetry in this high-energy competitive event. Open to all styles and levels.",
+    image: img,
+    tag: "Featured",
+  },
+  {
+    id: 3,
+    title: "Book Fair",
+    date: "May 1-3, 2024",
+    description:
+      "Discover new books, meet publishers, and participate in reading sessions at our annual book fair.",
+    image: img,
+    tag: "Coming Soon",
+  },
+  {
+    id: 4,
+    title: "Literary Week",
+    date: "March 15-21, 2024",
+    description:
+      "A week-long celebration of literature featuring workshops, author talks, and interactive sessions.",
+    image: img,
+    tag: "Upcoming",
+  },
+  {
+    id: 5,
+    title: "Poetry Slam",
+    date: "April 5, 2024",
+    description:
+      "Express yourself through poetry in this high-energy competitive event. Open to all styles and levels.",
+    image: img,
+    tag: "Featured",
+  },
+  {
+    id: 6,
+    title: "Book Fair",
+    date: "May 1-3, 2024",
+    description:
+      "Discover new books, meet publishers, and participate in reading sessions at our annual book fair.",
+    image: img,
+    tag: "Coming Soon",
   },
 ];
