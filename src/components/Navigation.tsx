@@ -18,9 +18,9 @@ import Link from "next/link";
 
 export function Navigation() {
   return (
-    <nav className="fixed w-full top-0 z-50 px-4 py-3 bg-background/50 backdrop-blur-md md:bg-transparent md:backdrop-blur-none">
-      <div className="max-w-7xl mx-auto flex items-center justify-between md:justify-center relative">
-        <Link href="/" className="inline-block md:hidden">
+    <nav className="fixed w-full top-0 z-50 px-4 py-3 bg-background/50 backdrop-blur-md ">
+      <div className="max-w-7xl mx-auto flex items-center justify-between  relative">
+        <Link href="/">
           <h2 className="text-xl">Litopia 2.0</h2>
         </Link>
 
@@ -46,7 +46,7 @@ export function Navigation() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:block">
-          <NavigationMenu className="bg-gradient-to-r from-foreground/5 via-foreground/10 to-foreground/5 rounded-full border border-foreground/10 px-6 py-2">
+          <NavigationMenu className=" px-6 py-2">
             <NavigationMenuList className="flex items-center gap-4">
               {navigationItems.map((item, i) => (
                 <NavigationMenuItem key={`nav-item-${i}`} className="px-4">
