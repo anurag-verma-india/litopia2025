@@ -4,7 +4,13 @@ import Image from "next/image";
 import { events } from "@/constants";
 import { motion } from "framer-motion";
 
-const EventCard = ({ event, index }: { event: (typeof events)[0]; index: number }) => {
+const EventCard = ({
+  event,
+  index,
+}: {
+  event: (typeof events)[0];
+  index: number;
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

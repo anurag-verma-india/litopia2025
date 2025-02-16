@@ -112,56 +112,74 @@ export const tiles = [
 export const events = [
   {
     id: 1,
-    title: "Literary Week",
-    date: "March 15-21, 2024",
+    title: "Bookmarked",
+    date: "March 11, 2025",
     description:
-      "A week-long celebration of literature featuring workshops, author talks, and interactive sessions.",
+      "Meet fellow bibliophiles, dive into discussions about books and authors, and soak in the magic of literature",
     image: img,
-    tag: "Upcoming",
+    tag: "Literature",
   },
   {
     id: 2,
-    title: "Poetry Slam",
-    date: "April 5, 2024",
+    title: "Detective Game",
+    date: "March 11, 2025",
     description:
-      "Express yourself through poetry in this high-energy competitive event. Open to all styles and levels.",
+      "Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test.",
     image: img,
-    tag: "Featured",
+    tag: "Mystery",
   },
   {
     id: 3,
-    title: "Book Fair",
-    date: "May 1-3, 2024",
+    title: "Medicaps Ki Aadalat",
+    date: "March 11, 2025",
     description:
-      "Discover new books, meet publishers, and participate in reading sessions at our annual book fair.",
+      "Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked",
     image: img,
-    tag: "Coming Soon",
+    tag: "Debate",
   },
   {
     id: 4,
-    title: "Literary Week",
-    date: "March 15-21, 2024",
+    title: "Anagat",
+    date: "March 11, 2025",
     description:
-      "A week-long celebration of literature featuring workshops, author talks, and interactive sessions.",
+      "A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you",
     image: img,
-    tag: "Upcoming",
+    tag: "Motivational",
   },
   {
     id: 5,
-    title: "Poetry Slam",
-    date: "April 5, 2024",
+    title: "Anvarat",
+    date: "March 12, 2025",
     description:
-      "Express yourself through poetry in this high-energy competitive event. Open to all styles and levels.",
+      "Don’t miss the famous theatre group’s incredible performance at the University Auditorium – it’s going to be unforgettable!",
     image: img,
-    tag: "Featured",
+    tag: "Theatre",
   },
   {
     id: 6,
-    title: "Book Fair",
-    date: "May 1-3, 2024",
+    title: "Squid Games",
+    date: "March 12, 2025",
     description:
-      "Discover new books, meet publishers, and participate in reading sessions at our annual book fair.",
+      "Experience the excitement of a gamified version of the hit web series – pure fun guaranteed!",
     image: img,
-    tag: "Coming Soon",
+    tag: "Adventure",
+  },
+  {
+    id: 7,
+    title: "Harry Potter Quiz",
+    date: "March 12, 2025",
+    description:
+      "Potterheads, this one’s for you! Join a fun-filled trivia session with amazing prizes waiting to be won.",
+    image: img,
+    tag: "Quiz",
+  },
+  {
+    id: 8,
+    title: "Mic Drop",
+    date: "March 12, 2025",
+    description:
+      "Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience.",
+    image: img,
+    tag: "Entertainment",
   },
 ];
