@@ -8,80 +8,64 @@ interface ProfileSectionProps {
   id?: string;
 }
 
+const facultyData = [
+  {
+    name: "Dr. Shalini Modh",
+    role: "Faculty Coordinator",
+    image: img,
+  },
+  {
+    name: "Dr. Jane Smith",
+    role: "Associate Coordinator",
+    image: img,
+  },
+  {
+    name: "Prof. Robert Johnson",
+    role: "Technical Coordinator",
+    image: img,
+  },
+];
+
 export const ProfileSection = ({ id }: ProfileSectionProps) => {
   return (
     <section id={id} className="w-full py-16 bg-background my-16">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Image and Name */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex-1 flex flex-col items-center space-y-2"
-          >
-            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-theme-gold/20">
-              <Image
-                src={img}
-                alt="Profile"
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                priority
-              />
-            </div>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-bold text-theme-red text-center mb-12"
+        >
+          Meet Our Faculty Team
+        </motion.h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {facultyData.map((faculty, index) => (
             <motion.div
+              key={faculty.name}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="flex flex-col items-center space-y-6 p-6 border-2 border-theme-gold/20 rounded-lg"
             >
-              <h3 className="text-2xl md:text-3xl font-semibold text-theme-gold text-center">
-                Mrs. Shalini Modh
-              </h3>
-              <p className="text-lg text-theme-gold/70 text-center">
-                Faculty Coordinator
-              </p>
+              <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-theme-gold/20">
+                <Image
+                  src={faculty.image}
+                  alt={faculty.name}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  priority={index === 0}
+                />
+              </div>
+              <div className="text-center space-y-2">
+                <h3 className="text-xl md:text-2xl font-semibold text-theme-gold">
+                  {faculty.name}
+                </h3>
+                <p className="text-lg text-theme-gold/70">{faculty.role}</p>
+              </div>
             </motion.div>
-          </motion.div>
-
-          {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-1 space-y-6 text-center lg:text-left"
-          >
-            <div className="space-y-4">
-              <motion.h2
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-4xl font-bold text-theme-red"
-              >
-                Meet Our Faculty Coordinator
-              </motion.h2>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                <p className="text-lg text-foreground/80 leading-relaxed">
-                  With over 15 years of experience in literature and academia, Dr.
-                  John Doe brings a wealth of knowledge and passion to our
-                  literary community. His vision has been instrumental in shaping
-                  Litopia into the vibrant hub of creativity it is today.
-                </p>
-                <p className="text-lg text-foreground/80 leading-relaxed">
-                  Under his guidance, we&apos;ve successfully organized numerous
-                  literary events, workshops, and collaborative projects that have
-                  enriched our college&apos;s cultural landscape.
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
+          ))}
         </div>
       </div>
     </section>
