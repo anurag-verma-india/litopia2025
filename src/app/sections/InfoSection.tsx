@@ -28,7 +28,7 @@ export const InfoSection = ({ id }: InfoSectionProps) => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-4xl font-bold text-theme-red"
             >
-              Heading
+              Welcome to Litopia 2.0!
             </motion.h2>
             <motion.div
               initial={{ opacity: 0 }}
@@ -37,10 +37,11 @@ export const InfoSection = ({ id }: InfoSectionProps) => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                molestiae dolorum porro ab minus quidem, eius expedita ipsam
-                repellendus accusamus laboriosam error excepturi maxime soluta
-                eligendi labore suscipit tempore dolorem.
+                The biggest and grandest literary fest, the Medi-caps University
+                has ever seen! Litopia 2.0, organized by The Sahityik Club at
+                Medi-Caps University, is happening on March 11th and 12th, 2025,
+                and {"it’s"} packed with exciting events you {"won’t"} want to
+                miss!
               </p>
             </motion.div>
 
@@ -53,9 +54,8 @@ export const InfoSection = ({ id }: InfoSectionProps) => {
               className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6"
             >
               {[
-                { value: "500+", label: "Members" },
-                { value: "50+", label: "Events" },
-                { value: "10+", label: "Years" },
+                { value: "5+", label: "Events" },
+                { value: "2+", label: "Days" },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -67,7 +67,9 @@ export const InfoSection = ({ id }: InfoSectionProps) => {
                     index === 2 ? "col-span-2 md:col-span-1" : ""
                   }`}
                 >
-                  <h4 className="text-2xl font-bold text-theme-gold">{stat.value}</h4>
+                  <h4 className="text-2xl font-bold text-theme-gold">
+                    {stat.value}
+                  </h4>
                   <p className="text-sm text-foreground/70">{stat.label}</p>
                 </motion.div>
               ))}
