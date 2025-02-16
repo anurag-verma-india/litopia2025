@@ -417,4 +417,14 @@ export const teamMembers = [
       linkedin: "",
     },
   },
+  {
+    id: 21,
+    name: "Devendra kalmodia",
+    role: "technical executive",
+    image: sakshi,
+    socials: {
+      instagram: "devendra-kalmodiya",
+      linkedin: "devendra-kalmodiya-633809277",
+    },
+  },
 ];
