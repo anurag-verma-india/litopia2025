@@ -32,13 +32,13 @@ const TeamCard = ({
         {/* Social Icons - Appear on Hover */}
         <div className="absolute inset-0 z-20 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <a
-            href={member.socials?.instagram}
+            href={`${member.socials?.instagram}`}
             className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors"
           >
             <Instagram className="w-5 h-5 text-theme-gold" />
           </a>
           <a
-            href={member.socials?.linkedin}
+            href={`${member.socials?.linkedin}`}
             className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors"
           >
             <Linkedin className="w-5 h-5 text-theme-gold" />
@@ -48,10 +48,10 @@ const TeamCard = ({
 
       {/* Content */}
       <div className="p-6 text-center">
-        <h3 className="text-xl font-bold text-theme-gold mb-1">
+        <h3 className="text-xl font-bold text-theme-gold mb-1 capitalize">
           {member.name}
         </h3>
-        <p className="text-theme-gold/70">{member.role}</p>
+        <p className="text-theme-gold/70 capitalize">{member.role}</p>
       </div>
     </motion.div>
   );
