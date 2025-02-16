@@ -1,62 +1,17 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import img from "@/assets/logo.webp";
+import { Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import { teamMembers } from "@/constants";
 
-const teamMembers = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "President",
-    image: img,
-    socials: {
-      twitter: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
-    },
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    role: "Vice President",
-    image: img,
-    socials: {
-      twitter: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
-    },
-  },
-  {
-    id: 3,
-    name: "Emma Davis",
-    role: "Secretary",
-    image: img,
-    socials: {
-      twitter: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
-    },
-  },
-  {
-    id: 4,
-    name: "Alex Turner",
-    role: "Treasurer",
-    image: img,
-    socials: {
-      twitter: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
-    },
-  },
-];
-
-const TeamCard = ({ member, index }: { member: typeof teamMembers[0]; index: number }) => {
+const TeamCard = ({
+  member,
+  index,
+}: {
+  member: (typeof teamMembers)[0];
+  index: number;
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -73,19 +28,19 @@ const TeamCard = ({ member, index }: { member: typeof teamMembers[0]; index: num
           alt={member.name}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
-        
+
         {/* Social Icons - Appear on Hover */}
         <div className="absolute inset-0 z-20 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <a href={member.socials.twitter} className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors">
-            <Twitter className="w-5 h-5 text-theme-gold" />
-          </a>
-          <a href={member.socials.facebook} className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors">
-            <Facebook className="w-5 h-5 text-theme-gold" />
-          </a>
-          <a href={member.socials.instagram} className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors">
+          <a
+            href={member.socials?.instagram}
+            className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors"
+          >
             <Instagram className="w-5 h-5 text-theme-gold" />
           </a>
-          <a href={member.socials.linkedin} className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors">
+          <a
+            href={member.socials?.linkedin}
+            className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors"
+          >
             <Linkedin className="w-5 h-5 text-theme-gold" />
           </a>
         </div>
@@ -96,9 +51,7 @@ const TeamCard = ({ member, index }: { member: typeof teamMembers[0]; index: num
         <h3 className="text-xl font-bold text-theme-gold mb-1">
           {member.name}
         </h3>
-        <p className="text-theme-gold/70">
-          {member.role}
-        </p>
+        <p className="text-theme-gold/70">{member.role}</p>
       </div>
     </motion.div>
   );
@@ -119,7 +72,8 @@ export const TeamSection = () => {
           Meet Our Team
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          The passionate individuals behind Litopia who work tirelessly to bring literature to life.
+          The passionate individuals behind Litopia who work tirelessly to bring
+          literature to life.
         </p>
       </motion.div>
 

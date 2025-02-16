@@ -183,3 +183,46 @@ export const events = [
     tag: "Entertainment",
   },
 ];
+
+export const teamMembers = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    role: "President",
+    image: img,
+    socials: {
+      instagram: "#",
+      linkedin: "#",
+    },
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    role: "Vice President",
+    image: img,
+    socials: {
+      instagram: "#",
+      linkedin: "#",
+    },
+  },
+  {
+    id: 3,
+    name: "Emma Davis",
+    role: "Secretary",
+    image: img,
+    socials: {
+      instagram: "#",
+      linkedin: "#",
+    },
+  },
+  {
+    id: 4,
+    name: "Alex Turner",
+    role: "Treasurer",
+    image: img,
+    socials: {
+      instagram: "#",
+      linkedin: "#",
+    },
+  },
+];
