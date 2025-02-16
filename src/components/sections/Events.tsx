@@ -53,7 +53,7 @@ const EventCard = ({
 
 export const Events = () => {
   return (
-    <section className="w-full py-12 px-4 bg-zinc-900/50">
+    <section className="w-full py-12 px-4 bg-zinc-900/50" id="events">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}

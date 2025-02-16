@@ -7,7 +7,10 @@ import { motion } from "framer-motion";
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-zinc-900/80 border-t border-theme-gold/10">
+    <footer
+      className="w-full bg-zinc-900/80 border-t border-theme-gold/10"
+      id="contact"
+    >
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
           {/* Logo and Description */}

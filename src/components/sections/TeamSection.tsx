@@ -59,7 +59,7 @@ const TeamCard = ({
 
 export const TeamSection = () => {
   return (
-    <section className="w-full py-16 px-4 bg-zinc-900/50">
+    <section className="w-full py-16 px-4 bg-zinc-900/50" id="team">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0 }}
