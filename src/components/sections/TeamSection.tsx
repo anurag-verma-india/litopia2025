@@ -3,23 +3,16 @@ import React from "react";
 import Image from "next/image";
 import { Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { teamMembers } from "@/constants";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-const TeamCard = ({
-  member,
-  index,
-}: {
-  member: (typeof teamMembers)[0];
-  index: number;
-}) => {
+const TeamCard = ({ member }: { member: (typeof teamMembers)[0] }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-theme-gold/10 transition-all duration-300 hover:border-theme-gold/20"
-    >
+    <div className="group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-theme-gold/10 transition-all duration-300 hover:border-theme-gold/20 h-full">
       {/* Image Container */}
       <div className="relative h-64 w-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-10" />
@@ -53,7 +46,7 @@ const TeamCard = ({
         </h3>
         <p className="text-theme-gold/70 capitalize">{member.role}</p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -77,13 +70,38 @@ export const TeamSection = () => {
         </p>
       </motion.div>
 
-      {/* Team Grid */}
+      {/* Team Slider */}
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <TeamCard key={member.id} member={member} index={index} />
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{
+            clickable: true,
+            el: ".swiper-pagination",
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+          className="w-full pb-20"
+        >
+          {teamMembers.map((member) => (
+            <SwiperSlide key={member.id}>
+              <TeamCard member={member} />
+            </SwiperSlide>
           ))}
-        </div>
+          <div className="swiper-pagination"></div>
+        </Swiper>
       </div>
     </section>
   );
