@@ -1,10 +1,10 @@
-import { Hero } from "./sections/Hero";
-import Tiles from "./sections/Tiles";
-import { InfoSection } from "./sections/InfoSection";
-import { Events } from "./sections/Events";
-import { ProfileSection } from "./sections/ProfileSection";
-import { TeamSection } from "./sections/TeamSection";
-import { Footer } from "./sections/Footer";
+import { Hero } from "../components/sections/Hero";
+import Tiles from "../components/sections/Tiles";
+import { InfoSection } from "../components/sections/InfoSection";
+import { Events } from "../components/sections/Events";
+import { ProfileSection } from "../components/sections/ProfileSection";
+import { TeamSection } from "../components/sections/TeamSection";
+import { Footer } from "../components/Footer";
 
 export default function Home() {
   return (

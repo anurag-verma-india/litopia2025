@@ -2,6 +2,28 @@ import { PhoneCall, PartyPopper, Users, SquareChartGantt } from "lucide-react";
 import { INavigationItems } from "./types/navigation";
 import img from "@/assets/logo.webp";
 
+import shivani from "@/assets/team/shivani_singh.webp";
+import anurag from "@/assets/team/anurag.webp";
+import akshan from "@/assets/team/akshansh.webp";
+import lav from "@/assets/team/luv-tiwari.webp";
+import palak from "@/assets/team/palak.webp";
+import anugrah from "@/assets/team/anugrah.webp";
+import viraj from "@/assets/team/viraj.webp";
+import rajpawar from "@/assets/team/raj.webp";
+import divyanshu from "@/assets/team/divyanshu.webp";
+import fatema from "@/assets/team/fatema.webp";
+import pulkit from "@/assets/team/pulkit.webp";
+import srashti from "@/assets/team/srashti.webp";
+import vinayak from "@/assets/team/vinayak.webp";
+import shashank from "@/assets/team/shashank.webp";
+// import divita from "@/assets/team/divita.webp";
+import pawan from "@/assets/team/pawan.webp";
+import sakshi from "@/assets/team/sakshi.webp";
+import tasneem from "@/assets/team/tasneem.webp";
+import mannat from "@/assets/team/mannat.webp";
+import riddhima from "@/assets/team/ridhima.webp";
+import abbas from "@/assets/team/abbas.webp";
+
 const navigationIconClass = "w-4 h-4";
 export const navigationItems: INavigationItems[] = [
   {
@@ -189,7 +211,7 @@ export const teamMembers = [
     id: 1,
     name: "Shivani Singh",
     role: "President",
-    image: "",
+    image: shivani,
     socials: {
       instagram: "",
       linkedin: "shivani-singh-34a509272",
@@ -199,7 +221,7 @@ export const teamMembers = [
     id: 2,
     name: "Anurag agrawal",
     role: "Vice president",
-    image: "",
+    image: anurag,
     socials: {
       instagram: "anurag_60521",
       linkedin: "anurag-agrawal-4735b4262",
@@ -209,7 +231,7 @@ export const teamMembers = [
     id: 3,
     name: "Akshansh singh pal",
     role: "Technical Head",
-    image: "",
+    image: akshan,
     socials: {
       instagram: "",
       linkedin: "akshansh-singh-pal-5a576a288",
@@ -219,7 +241,7 @@ export const teamMembers = [
     id: 4,
     name: "Lav Tiwari",
     role: "social media head",
-    image: "",
+    image: lav,
     socials: {
       instagram: "",
       linkedin: "",
@@ -229,7 +251,7 @@ export const teamMembers = [
     id: 5,
     name: "Palak shahdadpuri",
     role: "content head",
-    image: "",
+    image: palak,
     socials: {
       instagram: "",
       linkedin: "",
@@ -239,7 +261,7 @@ export const teamMembers = [
     id: 6,
     name: "Anugrah sharma",
     role: "operation head",
-    image: "",
+    image: anugrah,
     socials: {
       instagram: "anu_g_rah._",
       linkedin: "anu-g-rah",
@@ -249,7 +271,7 @@ export const teamMembers = [
     id: 7,
     name: "Viraj Agrawal",
     role: "operation co head",
-    image: "",
+    image: viraj,
     socials: {
       instagram: "",
       linkedin: "virajagrawal15",
@@ -259,7 +281,7 @@ export const teamMembers = [
     id: 8,
     name: "Raj Pawar",
     role: "Core technical executive",
-    image: "",
+    image: rajpawar,
     socials: {
       instagram: "raj__pawarr",
       linkedin: "raj-pawar-184a28292",
@@ -269,7 +291,7 @@ export const teamMembers = [
     id: 9,
     name: "Divyanshu Dawande",
     role: "PR Head",
-    image: "",
+    image: divyanshu,
     socials: {
       instagram: "",
       linkedin: "divyanshu-dawande-3539131b7",
@@ -279,7 +301,7 @@ export const teamMembers = [
     id: 10,
     name: "Abbas bhanpura wala",
     role: "Core technical executive",
-    image: "",
+    image: abbas,
     socials: {
       instagram: "abbas_bhanpura_wala",
       linkedin: "abbas-bhanpura-wala",
@@ -289,7 +311,7 @@ export const teamMembers = [
     id: 11,
     name: "Mannat Bhatia",
     role: "core content executive",
-    image: "",
+    image: mannat,
     socials: {
       instagram: "mant.17",
       linkedin: "mannatb17",
@@ -299,7 +321,7 @@ export const teamMembers = [
     id: 12,
     name: "Vinayak oberoi",
     role: "core PR executive",
-    image: "",
+    image: vinayak,
     socials: {
       instagram: "vinayakkk_04",
       linkedin: "vinayak-oberoi-622a22324",
@@ -309,7 +331,7 @@ export const teamMembers = [
     id: 13,
     name: "Pawan Kumar Yadav",
     role: "graphics executive",
-    image: "",
+    image: pawan,
     socials: {
       instagram: "",
       linkedin: "",
@@ -319,7 +341,7 @@ export const teamMembers = [
     id: 14,
     name: "Fatema Patanwala",
     role: "graphics head",
-    image: "",
+    image: fatema,
     socials: {
       instagram: "_fatemapatan",
       linkedin: "fatema-patanwala-9998022a7",
@@ -329,7 +351,7 @@ export const teamMembers = [
     id: 15,
     name: "Shashank Singh Chouhan",
     role: "technical executive",
-    image: "",
+    image: shashank,
     socials: {
       instagram: "shashank1",
       linkedin: "shashanksinghchouhan",
@@ -339,7 +361,7 @@ export const teamMembers = [
     id: 16,
     name: "Pulkit Vajpayee",
     role: "operation executive",
-    image: "",
+    image: pulkit,
     socials: {
       instagram: "pulkit_vajpayee",
       linkedin: "pulkit-vajpayee-1b82ab326",
@@ -359,7 +381,7 @@ export const teamMembers = [
     id: 18,
     name: "Srashti Goyal",
     role: "content executive",
-    image: "",
+    image: srashti,
     socials: {
       instagram: "",
       linkedin: "srashti-goyal-9aaa77313",
@@ -369,7 +391,7 @@ export const teamMembers = [
     id: 19,
     name: "Riddhima Kaushal",
     role: "core content executive",
-    image: "",
+    image: riddhima,
     socials: {
       instagram: "",
       linkedin: "riddhima-kaushal-17092005rk",
@@ -379,7 +401,7 @@ export const teamMembers = [
     id: 20,
     name: "Tasneem dewaswala",
     role: "core content executive",
-    image: "",
+    image: tasneem,
     socials: {
       instagram: "",
       linkedin: "tasneem-dewas-98b2332ab",
@@ -389,7 +411,7 @@ export const teamMembers = [
     id: 21,
     name: "Sakshi Sharma",
     role: "core operations executive",
-    image: "",
+    image: sakshi,
     socials: {
       instagram: "",
       linkedin: "",
