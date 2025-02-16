@@ -3,64 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-}
-
-::selection {
-  background-color: #A32837;
-  color: #FECC00;
-}
-
-/* firefox */
-::-moz-selection {
-  background-color: #A32837;
-  color: #FECC00;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-@layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-
-    --primary: 353 61% 42%;  /* #A32837 */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 48 100% 50%;  /* #FECC00 */
-    --secondary-foreground: 0 0% 0%;
-
-    --muted: 51 45% 66%;  /* #DCCF73 */
-    --muted-foreground: 0 0% 45.1%;
-
-    --accent: 353 61% 42%;  /* #A32837 */
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 48 100% 50%;  /* #FECC00 */
-    --input: 353 61% 42%;  /* #A32837 */
-    --ring: 51 45% 66%;  /* #DCCF73 */
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
     --background: 0 0% 10%;
     --foreground: 0 0% 100%;
 
@@ -70,25 +13,51 @@ html {
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 353 61% 42%;  /* #A32837 */
+    --primary: 353 61% 42%; /* #A32837 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 48 100% 50%;  /* #FECC00 */
+    --secondary: 48 100% 50%; /* #FECC00 */
     --secondary-foreground: 0 0% 0%;
 
-    --muted: 51 45% 66%;  /* #DCCF73 */
+    --muted: 51 45% 66%; /* #DCCF73 */
     --muted-foreground: 0 0% 80%;
 
-    --accent: 353 61% 42%;  /* #A32837 */
+    --accent: 353 61% 42%; /* #A32837 */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 48 100% 50%;  /* #FECC00 */
-    --input: 353 61% 42%;  /* #A32837 */
-    --ring: 51 45% 66%;  /* #DCCF73 */
+    --border: 48 100% 50%; /* #FECC00 */
+    --input: 353 61% 42%; /* #A32837 */
+    --ring: 51 45% 66%; /* #DCCF73 */
+
+    --radius: 0.5rem;
   }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+::selection {
+  background-color: #a32837;
+  color: #fecc00;
+}
+
+/* firefox */
+::-moz-selection {
+  background-color: #a32837;
+  color: #fecc00;
 }
 
 .hero-section {

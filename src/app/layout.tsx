@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta charSet="UTF-8" />
@@ -35,12 +35,13 @@ export default function RootLayout({
       </Head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-900 min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           <Navigation />
