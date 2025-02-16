@@ -62,8 +62,19 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
-        "slow-spin": "spin 20s linear infinite",
-        "slow-spin-reverse": "spin 25s linear infinite reverse",
+        "slow-spin": "slow-spin 30s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+        "slow-spin-reverse":
+          "slow-spin 35s cubic-bezier(0.4, 0, 0.2, 1) infinite reverse",
+      },
+      keyframes: {
+        "slow-spin": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+      },
+      transitionTimingFunction: {
+        "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
+        "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
       },
     },
   },

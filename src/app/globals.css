@@ -42,22 +42,41 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+    min-height: 100vh;
+    /* Optimize paint performance */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000;
+    -webkit-perspective: 1000;
   }
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Optimize animations for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 ::selection {
-  background-color: #a32837;
-  color: #fecc00;
+  @apply bg-theme-red text-theme-yellow;
 }
 
 /* firefox */
 ::-moz-selection {
-  background-color: #a32837;
-  color: #fecc00;
+  @apply bg-theme-red text-theme-yellow;
 }
 
 .hero-section {
@@ -65,4 +84,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* Optimize background performance */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Optimize animations */
+.animate-slow-spin {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
 }

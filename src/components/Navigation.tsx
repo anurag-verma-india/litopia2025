@@ -18,7 +18,7 @@ import Link from "next/link";
 
 export function Navigation() {
   return (
-    <nav className="fixed w-full top-0 z-50 px-4 py-3 bg-background/50 backdrop-blur-md ">
+    <nav className="sticky w-full top-0 z-[9999] px-4 py-3 bg-background/50 backdrop-blur-md border-b border-zinc-700/50 ">
       <div className="max-w-7xl mx-auto flex items-center justify-between  relative">
         <Link href="/">
           <h2 className="text-xl">Litopia 2.0</h2>
