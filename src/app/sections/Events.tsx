@@ -20,7 +20,7 @@ const EventCard = ({
       className="group relative flex flex-col h-full overflow-hidden rounded-2xl border border-theme-gold/10 bg-zinc-900/50 transition-all duration-300 hover:border-theme-gold/20"
     >
       {/* Image Container */}
-      <div className="relative h-64 w-full overflow-hidden">
+      {/* <div className="relative h-64 w-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-10" />
         <Image
           src={event.image}
@@ -32,7 +32,7 @@ const EventCard = ({
             {event.tag}
           </span>
         </div>
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="flex flex-col flex-grow p-6 space-y-4">
