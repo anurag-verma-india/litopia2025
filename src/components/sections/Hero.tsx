@@ -11,19 +11,6 @@ import MedicapsDarkLogo from "@/assets/medicaps_dark_logo.png";
 import YearsLogo from "@/assets/logo_25.png";
 import SahityikDarkLogo from "@/assets/sahityik_light_logo.png";
 
-// Constants
-const ANIMATION_DURATION = {
-  FAST: 0.2,
-  MEDIUM: 0.3,
-};
-
-const ANIMATION_DELAY = {
-  LOGO: 0,
-  TITLE: 0.1,
-  SUBTITLE: 0.15,
-  SPONSORS: 0.2,
-};
-
 // Animation variants for better performance
 const containerVariants = {
   hidden: { opacity: 0 },
