@@ -47,18 +47,18 @@ export const Footer = () => {
             </h3>
             <div className="flex flex-col items-center md:items-start space-y-2">
               <a
-                href="mailto:contact@litopia.com"
+                href="mailto:thesahityikclub@gmail.com"
                 className="flex items-center space-x-2 text-gray-300 hover:text-theme-gold transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>contact@litopia.com</span>
+                <span>thesahityikclub@gmail.com</span>
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+919752129008"
                 className="flex items-center space-x-2 text-gray-300 hover:text-theme-gold transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span>+91 123 456 7890</span>
+                <span>+91 975 212 9008</span>
               </a>
             </div>
           </motion.div>
@@ -74,14 +74,16 @@ export const Footer = () => {
             <h3 className="text-xl font-semibold text-theme-gold">Follow Us</h3>
             <div className="flex items-center space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/medicaps_sahityik/"
+                target="_blank"
                 className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-theme-gold" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/the-sahityik"
+                target="_blank"
                 className="p-2 bg-theme-red/20 rounded-full border border-theme-gold/10 hover:bg-theme-red/30 transition-colors"
                 aria-label="LinkedIn"
               >
