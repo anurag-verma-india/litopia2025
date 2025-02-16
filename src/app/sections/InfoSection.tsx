@@ -84,11 +84,11 @@ export const InfoSection = ({ id }: InfoSectionProps) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex-1 relative w-full aspect-square max-w-xl"
           >
-            <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-theme-gold/20">
+            <div className="relative flex items-center justify-center w-full h-full overflow-hidden ">
               <Image
                 src={img}
                 alt="Info Section Image"
-                className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                className="object-cover w-full  transition-transform duration-300 hover:scale-105"
               />
             </div>
           </motion.div>
