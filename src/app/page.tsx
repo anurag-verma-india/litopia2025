@@ -1,9 +1,4 @@
 import { Hero } from "./sections/Hero";
-// import { Benefits } from "./sections/Benefits";
-// import { FAQ } from "./sections/Faq";
-// import { Footer } from "./sections/Footer";
-// import { Sponsors } from "./sections/Investors";
-// import { Testimonials } from "./sections/Testimonials";
 import Tiles from "./sections/Tiles";
 import { InfoSection } from "./sections/InfoSection";
 import { Events } from "./sections/Events";

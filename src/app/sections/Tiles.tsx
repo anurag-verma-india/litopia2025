@@ -95,31 +95,13 @@ const InteractiveTiles = () => {
     setIsHovering(false);
   };
 
-  const getCurrentContent = () => {
-    const currentText = hoveredText || selectedText || tiles[currentIndex].text;
-    return tiles.find((tile) => tile.text === currentText) || tiles[0];
-  };
-
   return (
     <section className="w-full py-16 px-4 bg-zinc-900/50">
-      {/* Section Title */}
-      {/* <div className="text-center mb-16">
-        <h2
-          className={`text-4xl md:text-5xl font-bold ${currentTheme.text} mb-4`}
-        >
-          Our Events
-        </h2>
-        <p className={`text-xl ${currentTheme.description} max-w-3xl mx-auto`}>
-          Discover our exciting lineup of events and activities designed to
-          inspire, engage, and connect our community.
-        </p>
-      </div> */}
-
       <div
         className={`max-w-7xl mx-auto rounded-3xl p-8 md:p-12 transition-all duration-300 border ${currentTheme.border} ${currentTheme.bg}`}
       >
         <div
-          className="grid gap-6 mb-12"
+          className="grid gap-6"
           style={{
             gridTemplateAreas: isMobile
               ? gridLayouts.mobile.areas
@@ -174,22 +156,6 @@ const InteractiveTiles = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Content Display Section */}
-        <div
-          className={`space-y-6 transition-all duration-300 p-8 rounded-2xl border ${currentTheme.border} ${currentTheme.tile}`}
-        >
-          <h2
-            className={`text-3xl md:text-4xl font-bold ${currentTheme.text} tracking-tight`}
-          >
-            {getCurrentContent().title}
-          </h2>
-          <p
-            className={`${currentTheme.description} text-lg md:text-xl leading-relaxed`}
-          >
-            {getCurrentContent().description}
-          </p>
         </div>
       </div>
     </section>
