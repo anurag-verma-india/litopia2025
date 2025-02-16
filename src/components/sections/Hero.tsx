@@ -13,15 +13,40 @@ import SahityikDarkLogo from "@/assets/sahityik_light_logo.png";
 
 // Constants
 const ANIMATION_DURATION = {
-  FAST: 0.4,
-  MEDIUM: 0.5,
+  FAST: 0.2,
+  MEDIUM: 0.3,
 };
 
 const ANIMATION_DELAY = {
   LOGO: 0,
-  TITLE: 0.2,
-  SUBTITLE: 0.3,
-  SPONSORS: 0.4,
+  TITLE: 0.1,
+  SUBTITLE: 0.15,
+  SPONSORS: 0.2,
+};
+
+// Animation variants for better performance
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 30,
+    },
+  },
 };
 
 export function Hero({ id }: AnimatedProps) {
@@ -42,15 +67,7 @@ export function Hero({ id }: AnimatedProps) {
     }
   }, []);
 
-  // Base animation config that respects user preferences
-  const baseAnimation =
-    prefersReducedMotion || hasAnimated
-      ? { animate: { opacity: 1, y: 0 } }
-      : {
-          initial: { opacity: 0, y: 20 },
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: ANIMATION_DURATION.FAST },
-        };
+  if (!isLoaded) return null;
 
   return (
     <section
@@ -67,15 +84,14 @@ export function Hero({ id }: AnimatedProps) {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-4xl mx-auto text-center">
+      <motion.div
+        className="relative max-w-4xl mx-auto text-center"
+        variants={containerVariants}
+        initial={hasAnimated || prefersReducedMotion ? false : "hidden"}
+        animate="visible"
+      >
         {/* Logo */}
-        <motion.div
-          {...baseAnimation}
-          transition={{
-            duration: ANIMATION_DURATION.FAST,
-            delay: hasAnimated ? 0 : ANIMATION_DELAY.LOGO,
-          }}
-        >
+        <motion.div variants={itemVariants}>
           <Image
             className="block mx-auto drop-shadow-2xl contrast-125 w-[300px] md:w-[500px] h-auto"
             width={500}
@@ -89,24 +105,16 @@ export function Hero({ id }: AnimatedProps) {
 
         {/* Title */}
         <motion.h1
+          variants={itemVariants}
           className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-[#CCC]"
-          {...baseAnimation}
-          transition={{
-            duration: ANIMATION_DURATION.MEDIUM,
-            delay: hasAnimated ? 0 : ANIMATION_DELAY.TITLE,
-          }}
         >
           The Literature Fest
         </motion.h1>
 
         {/* Subtitle */}
         <motion.h6
+          variants={itemVariants}
           className="text-lg md:text-xl uppercase font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-theme-red via-theme-gold to-theme-yellow"
-          {...baseAnimation}
-          transition={{
-            duration: ANIMATION_DURATION.MEDIUM,
-            delay: hasAnimated ? 0 : ANIMATION_DELAY.SUBTITLE,
-          }}
         >
           Presented By
         </motion.h6>
@@ -120,11 +128,7 @@ export function Hero({ id }: AnimatedProps) {
           ].map((logo) => (
             <motion.div
               key={logo.alt}
-              {...baseAnimation}
-              transition={{
-                duration: ANIMATION_DURATION.MEDIUM,
-                delay: hasAnimated ? 0 : ANIMATION_DELAY.SPONSORS,
-              }}
+              variants={itemVariants}
               whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
               whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
               className="w-[80px] md:w-[100px]"
@@ -140,7 +144,7 @@ export function Hero({ id }: AnimatedProps) {
             </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
