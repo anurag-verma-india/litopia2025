@@ -54,11 +54,11 @@ export const Footer = () => {
                 <span>thesahityikclub@gmail.com</span>
               </a>
               <a
-                href="tel:+919752129008"
+                href="tel:+917043177152"
                 className="flex items-center space-x-2 text-gray-300 hover:text-theme-gold transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span>+91 975 212 9008</span>
+                <span>+91 704 317 7152</span>
               </a>
             </div>
           </motion.div>

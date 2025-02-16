@@ -81,11 +81,11 @@ export const tiles = [
   },
   {
     id: 4,
-    text: "Anagat",
+    text: "The Legacy",
     gridArea: { desktop: "kite", mobile: "d" },
     emoji: "🎙️",
     imageUrl: "",
-    title: "Anagat",
+    title: "The Legacy",
     description:
       "A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you",
   },
@@ -161,7 +161,7 @@ export const events = [
   },
   {
     id: 4,
-    title: "Anagat",
+    title: "The Legacy",
     date: "March 11, 2025",
     description:
       "A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you",
