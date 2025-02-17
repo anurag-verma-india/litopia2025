@@ -12,8 +12,8 @@ export default function Home() {
       <Hero id="top" />
       <InfoSection id="about" />
       <Events />
-      <Tiles />
-      <ProfileSection />
+      {/* <Tiles /> */}
+      {/* <ProfileSection /> */}
       <TeamSection />
       <Footer />
     </div>
