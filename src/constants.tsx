@@ -1,6 +1,6 @@
 import { PhoneCall, PartyPopper, Users, SquareChartGantt } from "lucide-react";
 import { INavigationItems } from "./types/navigation";
-import img from "@/assets/logo.webp";
+// import img from "@/assets/logo.webp";
 import AdalatImg from "@/assets/events/adalat.jpg";
 import AnavrattImg from "@/assets/events/anavratt.jpg";
 import BookmarkedImg from "@/assets/events/bookmarked.jpg";
