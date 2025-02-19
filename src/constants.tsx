@@ -227,7 +227,7 @@ export const teamMembers = [
     role: "President",
     image: shivani,
     socials: {
-      instagram: "",
+      instagram: "singh.shivani.xx",
       linkedin: "shivani-singh-34a509272",
     },
   },
@@ -247,7 +247,7 @@ export const teamMembers = [
     role: "Technical Head",
     image: akshan,
     socials: {
-      instagram: "",
+      instagram: "akkshansshhh",
       linkedin: "akshansh-singh-pal-5a576a288",
     },
   },
@@ -257,7 +257,7 @@ export const teamMembers = [
     role: "social media head",
     image: lav,
     socials: {
-      instagram: "",
+      instagram: "thelavtiwari",
       linkedin: "",
     },
   },
@@ -267,7 +267,7 @@ export const teamMembers = [
     role: "content head",
     image: palak,
     socials: {
-      instagram: "",
+      instagram: "palakshahdadpuri",
       linkedin: "",
     },
   },
@@ -287,7 +287,7 @@ export const teamMembers = [
     role: "operation co head",
     image: viraj,
     socials: {
-      instagram: "",
+      instagram: "agrawal__viraj",
       linkedin: "virajagrawal15",
     },
   },
@@ -307,7 +307,7 @@ export const teamMembers = [
     role: "PR Head",
     image: divyanshu,
     socials: {
-      instagram: "",
+      instagram: "d___divyanshu",
       linkedin: "divyanshu-dawande-3539131b7",
     },
   },
@@ -337,7 +337,7 @@ export const teamMembers = [
     role: "core PR executive",
     image: vinayak,
     socials: {
-      instagram: "vinayakkk_04",
+      instagram: "Vinayakkk_04 ",
       linkedin: "vinayak-oberoi-622a22324",
     },
   },
@@ -347,7 +347,7 @@ export const teamMembers = [
     role: "graphics executive",
     image: pawan,
     socials: {
-      instagram: "",
+      instagram: "scientist7292",
       linkedin: "",
     },
   },
@@ -367,7 +367,7 @@ export const teamMembers = [
     role: "technical executive",
     image: shashank,
     socials: {
-      instagram: "shashank1",
+      instagram: "_shashank__1_",
       linkedin: "shashanksinghchouhan",
     },
   },
@@ -387,7 +387,7 @@ export const teamMembers = [
     role: "content executive",
     image: "",
     socials: {
-      instagram: "",
+      instagram: "sincewemustdie",
       linkedin: "divita-barfa-a8abb7227",
     },
   },
@@ -397,7 +397,7 @@ export const teamMembers = [
     role: "content executive",
     image: srashti,
     socials: {
-      instagram: "",
+      instagram: "error404",
       linkedin: "srashti-goyal-9aaa77313",
     },
   },
@@ -407,7 +407,7 @@ export const teamMembers = [
     role: "core content executive",
     image: riddhima,
     socials: {
-      instagram: "",
+      instagram: "riddhimakaushal_17",
       linkedin: "riddhima-kaushal-17092005rk",
     },
   },
@@ -417,7 +417,7 @@ export const teamMembers = [
     role: "core content executive",
     image: tasneem,
     socials: {
-      instagram: "",
+      instagram: "error404",
       linkedin: "tasneem-dewas-98b2332ab",
     },
   },
@@ -427,7 +427,7 @@ export const teamMembers = [
     role: "core operations executive",
     image: sakshi,
     socials: {
-      instagram: "",
+      instagram: "saaksshii05_",
       linkedin: "",
     },
   },
@@ -437,7 +437,7 @@ export const teamMembers = [
     role: "technical executive",
     image: sakshi,
     socials: {
-      instagram: "devendra-kalmodiya",
+      instagram: "Devendra_kalmodiya",
       linkedin: "devendra-kalmodiya-633809277",
     },
   },
