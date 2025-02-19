@@ -54,7 +54,7 @@ export const InfoSection = ({ id }: InfoSectionProps) => {
               className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6"
             >
               {[
-                { value: "5+", label: "Events" },
+                { value: "8+", label: "Events" },
                 { value: "2+", label: "Days" },
               ].map((stat, index) => (
                 <motion.div

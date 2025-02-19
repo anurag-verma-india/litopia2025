@@ -1,6 +1,14 @@
 import { PhoneCall, PartyPopper, Users, SquareChartGantt } from "lucide-react";
 import { INavigationItems } from "./types/navigation";
-import img from "@/assets/logo.webp";
+// import img from "@/assets/logo.webp";
+import AdalatImg from "@/assets/events/adalat.jpeg";
+import AnavrattImg from "@/assets/events/anavratt.jpg";
+import BookmarkedImg from "@/assets/events/bookmarked.jpg";
+import DetectiveImg from "@/assets/events/detective.jpg";
+import harryPotterImg from "@/assets/events/harry-potter-quiz.png";
+import LegacyImg from "@/assets/events/legacy.jpg";
+import SquidGameImg from "@/assets/events/squid-game-2.jpg";
+import MicDropImg from "@/assets/events/mic-drop.jpeg";
 
 import shivani from "@/assets/team/shivani_singh.webp";
 import anurag from "@/assets/team/anurag.webp";
@@ -23,6 +31,12 @@ import tasneem from "@/assets/team/tasneem.webp";
 import mannat from "@/assets/team/mannat.webp";
 import riddhima from "@/assets/team/ridhima.webp";
 import abbas from "@/assets/team/abbas.webp";
+import devendra from "@/assets/team/600x400.svg";
+
+import DrRupaliChaturvedi from "@/assets/faculty/Dr. Rupali Chaturvedi.png";
+import DrShaliniModh from "@/assets/faculty/Dr. Shalini Modh.jpg";
+import MsAayushiBharadwaj from "@/assets/faculty/Ms. Aayushi Bharadwaj.jpg";
+import MsShubhrataKanungo from "@/assets/faculty/Ms. Shubhrata Kanungo.jpg";
 
 const navigationIconClass = "w-4 h-4";
 export const navigationItems: INavigationItems[] = [
@@ -138,7 +152,8 @@ export const events = [
     date: "March 11, 2025",
     description:
       "Meet fellow bibliophiles, dive into discussions about books and authors, and soak in the magic of literature",
-    image: img,
+    // image: img,
+    image: BookmarkedImg,
     tag: "Literature",
   },
   {
@@ -147,7 +162,7 @@ export const events = [
     date: "March 11, 2025",
     description:
       "Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test.",
-    image: img,
+    image: DetectiveImg,
     tag: "Mystery",
   },
   {
@@ -156,8 +171,8 @@ export const events = [
     date: "March 11, 2025",
     description:
       "Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked",
-    image: img,
-    tag: "Debate",
+    image: AdalatImg,
+    tag: "Drama",
   },
   {
     id: 4,
@@ -165,7 +180,7 @@ export const events = [
     date: "March 11, 2025",
     description:
       "A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you",
-    image: img,
+    image: LegacyImg,
     tag: "Motivational",
   },
   {
@@ -174,7 +189,7 @@ export const events = [
     date: "March 12, 2025",
     description:
       "Don’t miss the famous theatre group’s incredible performance at the University Auditorium – it’s going to be unforgettable!",
-    image: img,
+    image: AnavrattImg,
     tag: "Theatre",
   },
   {
@@ -183,7 +198,7 @@ export const events = [
     date: "March 12, 2025",
     description:
       "Experience the excitement of a gamified version of the hit web series – pure fun guaranteed!",
-    image: img,
+    image: SquidGameImg,
     tag: "Adventure",
   },
   {
@@ -192,7 +207,7 @@ export const events = [
     date: "March 12, 2025",
     description:
       "Potterheads, this one’s for you! Join a fun-filled trivia session with amazing prizes waiting to be won.",
-    image: img,
+    image: harryPotterImg,
     tag: "Quiz",
   },
   {
@@ -201,7 +216,7 @@ export const events = [
     date: "March 12, 2025",
     description:
       "Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience.",
-    image: img,
+    image: MicDropImg,
     tag: "Entertainment",
   },
 ];
@@ -213,7 +228,7 @@ export const teamMembers = [
     role: "President",
     image: shivani,
     socials: {
-      instagram: "",
+      instagram: "singh.shivani.xx",
       linkedin: "shivani-singh-34a509272",
     },
   },
@@ -233,7 +248,7 @@ export const teamMembers = [
     role: "Technical Head",
     image: akshan,
     socials: {
-      instagram: "",
+      instagram: "akkshansshhh",
       linkedin: "akshansh-singh-pal-5a576a288",
     },
   },
@@ -243,7 +258,7 @@ export const teamMembers = [
     role: "social media head",
     image: lav,
     socials: {
-      instagram: "",
+      instagram: "thelavtiwari",
       linkedin: "",
     },
   },
@@ -253,7 +268,7 @@ export const teamMembers = [
     role: "content head",
     image: palak,
     socials: {
-      instagram: "",
+      instagram: "palakshahdadpuri",
       linkedin: "",
     },
   },
@@ -273,7 +288,7 @@ export const teamMembers = [
     role: "operation co head",
     image: viraj,
     socials: {
-      instagram: "",
+      instagram: "agrawal__viraj",
       linkedin: "virajagrawal15",
     },
   },
@@ -293,7 +308,7 @@ export const teamMembers = [
     role: "PR Head",
     image: divyanshu,
     socials: {
-      instagram: "",
+      instagram: "d___divyanshu",
       linkedin: "divyanshu-dawande-3539131b7",
     },
   },
@@ -323,7 +338,7 @@ export const teamMembers = [
     role: "core PR executive",
     image: vinayak,
     socials: {
-      instagram: "vinayakkk_04",
+      instagram: "Vinayakkk_04 ",
       linkedin: "vinayak-oberoi-622a22324",
     },
   },
@@ -333,7 +348,7 @@ export const teamMembers = [
     role: "graphics executive",
     image: pawan,
     socials: {
-      instagram: "",
+      instagram: "scientist7292",
       linkedin: "",
     },
   },
@@ -353,7 +368,7 @@ export const teamMembers = [
     role: "technical executive",
     image: shashank,
     socials: {
-      instagram: "shashank1",
+      instagram: "_shashank__1_",
       linkedin: "shashanksinghchouhan",
     },
   },
@@ -373,7 +388,7 @@ export const teamMembers = [
     role: "content executive",
     image: "",
     socials: {
-      instagram: "",
+      instagram: "sincewemustdie",
       linkedin: "divita-barfa-a8abb7227",
     },
   },
@@ -383,7 +398,7 @@ export const teamMembers = [
     role: "content executive",
     image: srashti,
     socials: {
-      instagram: "",
+      instagram: "error404",
       linkedin: "srashti-goyal-9aaa77313",
     },
   },
@@ -393,7 +408,7 @@ export const teamMembers = [
     role: "core content executive",
     image: riddhima,
     socials: {
-      instagram: "",
+      instagram: "riddhimakaushal_17",
       linkedin: "riddhima-kaushal-17092005rk",
     },
   },
@@ -403,7 +418,7 @@ export const teamMembers = [
     role: "core content executive",
     image: tasneem,
     socials: {
-      instagram: "",
+      instagram: "error404",
       linkedin: "tasneem-dewas-98b2332ab",
     },
   },
@@ -413,7 +428,7 @@ export const teamMembers = [
     role: "core operations executive",
     image: sakshi,
     socials: {
-      instagram: "",
+      instagram: "saaksshii05_",
       linkedin: "",
     },
   },
@@ -421,10 +436,33 @@ export const teamMembers = [
     id: 21,
     name: "Devendra kalmodia",
     role: "technical executive",
-    image: sakshi,
+    image: devendra,
     socials: {
-      instagram: "devendra-kalmodiya",
+      instagram: "Devendra_kalmodiya",
       linkedin: "devendra-kalmodiya-633809277",
     },
+  },
+];
+
+export const facultyData = [
+  {
+    name: "Dr. Shalini Modh",
+    role: "Faculty Incharge",
+    image: DrShaliniModh,
+  },
+  {
+    name: "Ms. Shubhrata Kanungo",
+    role: "Faculty Coordinator",
+    image: MsShubhrataKanungo,
+  },
+  {
+    name: "Dr.Rupali Chaturvedi",
+    role: "Faculty Coordinator",
+    image: DrRupaliChaturvedi,
+  },
+  {
+    name: "Ms. Aayushi Bharadwaj",
+    role: "Faculty Coordinator",
+    image: MsAayushiBharadwaj,
   },
 ];
