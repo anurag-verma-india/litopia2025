@@ -1,5 +1,5 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import React from "react";
 import Image from "next/image";
 // import img from "@/assets/logo.webp";
