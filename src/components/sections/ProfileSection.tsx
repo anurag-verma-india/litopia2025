@@ -15,23 +15,23 @@ interface ProfileSectionProps {
 
 const facultyData = [
     {
+        name: "Dr. Shalini Modh",
+        role: "Faculty Incharge",
+        image: DrShaliniModh,
+    },
+    {
         name: "Dr.Rupali Chaturvedi",
         role: "Faculty Coordinator",
         image: DrRupaliChaturvedi,
     },
     {
-        name: "Dr. Shalini Modh",
-        role: "Associate Coordinator",
-        image: DrShaliniModh,
-    },
-    {
         name: "Ms. Aayushi Bharadwaj",
-        role: "Technical Coordinator",
+        role: "Faculty Coordinator",
         image: MsAayushiBharadwaj,
     },
     {
         name: "Ms. Shubhrata Kanungo",
-        role: "Technical Coordinator",
+        role: "Faculty Coordinator",
         image: MsShubhrataKanungo,
     },
 ];
