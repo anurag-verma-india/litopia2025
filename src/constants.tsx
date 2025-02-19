@@ -32,6 +32,11 @@ import mannat from "@/assets/team/mannat.webp";
 import riddhima from "@/assets/team/ridhima.webp";
 import abbas from "@/assets/team/abbas.webp";
 
+import DrRupaliChaturvedi from "@/assets/faculty/Dr. Rupali Chaturvedi.png";
+import DrShaliniModh from "@/assets/faculty/Dr. Shalini Modh.jpg";
+import MsAayushiBharadwaj from "@/assets/faculty/Ms. Aayushi Bharadwaj.jpg";
+import MsShubhrataKanungo from "@/assets/faculty/Ms. Shubhrata Kanungo.jpg";
+
 const navigationIconClass = "w-4 h-4";
 export const navigationItems: INavigationItems[] = [
   {
@@ -435,5 +440,28 @@ export const teamMembers = [
       instagram: "devendra-kalmodiya",
       linkedin: "devendra-kalmodiya-633809277",
     },
+  },
+];
+
+export const facultyData = [
+  {
+    name: "Dr. Shalini Modh",
+    role: "Faculty Incharge",
+    image: DrShaliniModh,
+  },
+  {
+    name: "Ms. Shubhrata Kanungo",
+    role: "Faculty Coordinator",
+    image: MsShubhrataKanungo,
+  },
+  {
+    name: "Dr.Rupali Chaturvedi",
+    role: "Faculty Coordinator",
+    image: DrRupaliChaturvedi,
+  },
+  {
+    name: "Ms. Aayushi Bharadwaj",
+    role: "Faculty Coordinator",
+    image: MsAayushiBharadwaj,
   },
 ];
