@@ -4,7 +4,7 @@ import Image from "next/image";
 // import img from "@/assets/logo.webp";
 import { motion } from "framer-motion";
 
-import DrRupaliChaturvedi from "@/assets/faculty/Dr. Rupali Chaturvedi.jpg";
+import DrRupaliChaturvedi from "@/assets/faculty/Dr. Rupali Chaturvedi Longer.png";
 import DrShaliniModh from "@/assets/faculty/Dr. Shalini Modh.jpg";
 import MsAayushiBharadwaj from "@/assets/faculty/Ms. Aayushi Bharadwaj.jpg";
 import MsShubhrataKanungo from "@/assets/faculty/Ms. Shubhrata Kanungo.jpg";
