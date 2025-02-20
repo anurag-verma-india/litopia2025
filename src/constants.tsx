@@ -11,7 +11,8 @@ import SquidGameImg from "@/assets/events/squid-game-2.jpg";
 import MicDropImg from "@/assets/events/mic-drop.jpeg";
 
 import shivani from "@/assets/team/shivani_singh.webp";
-import anurag from "@/assets/team/anurag.webp";
+// import anurag from "@/assets/team/anurag.webp";
+import anurag from "@/assets/team/agrawal.jpeg";
 import akshan from "@/assets/team/akshansh.webp";
 import lav from "@/assets/team/luv-tiwari.webp";
 import palak from "@/assets/team/palak.webp";
