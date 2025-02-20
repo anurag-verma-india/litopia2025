@@ -32,7 +32,8 @@ import tasneem from "@/assets/team/tasneem.webp";
 import mannat from "@/assets/team/mannat.webp";
 import riddhima from "@/assets/team/ridhima.webp";
 import abbas from "@/assets/team/abbas.webp";
-import devendra from "@/assets/team/600x400.svg";
+// import devendra from "@/assets/team/600x400.svg";
+import devendra from "@/assets/team/devendra.webp"
 
 import DrRupaliChaturvedi from "@/assets/faculty/Dr. Rupali Chaturvedi.png";
 import DrShaliniModh from "@/assets/faculty/Dr. Shalini Modh.jpg";
