@@ -19,7 +19,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Litopia 2.0",
   description:
-    "The biggest and grandest literary fest, the Medi-caps University has ever seen! Litopia 2.0, organized by The Sahityik Club at Medi-Caps University,",
+    "The biggest and grandest literary fest, the Medi-caps University has ever seen! Litopia 2.0, organized by The Sahityik Club at Medi-Caps University.",
 };
 
 export default function RootLayout({
