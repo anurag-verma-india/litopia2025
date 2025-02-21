@@ -33,7 +33,7 @@ import mannat from "@/assets/team/mannat.webp";
 import riddhima from "@/assets/team/ridhima.webp";
 import abbas from "@/assets/team/abbas.webp";
 // import devendra from "@/assets/team/600x400.svg";
-import devendra from "@/assets/team/devendra.webp"
+import devendra from "@/assets/team/devendra.webp";
 
 import DrRupaliChaturvedi from "@/assets/faculty/Dr. Rupali Chaturvedi.png";
 import DrShaliniModh from "@/assets/faculty/Dr. Shalini Modh.jpg";
@@ -175,8 +175,8 @@ export const events = [
     description:
       "Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked",
     image: AdalatImg,
-    // registration: "https://forms.gle/YFiCC3S8Y7UYiYBt6",
-    registration: "example.com",
+    registration: "https://forms.gle/YFiCC3S8Y7UYiYBt6",
+    // registration: "example.com",
     tag: "Drama",
   },
   {
@@ -224,8 +224,8 @@ export const events = [
     description:
       "Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience.",
     image: MicDropImg,
-    // registration: "https://forms.gle/BEam3ByEGoZY9vmB8",
-    registration: "example.com",
+    registration: "https://forms.gle/BEam3ByEGoZY9vmB8",
+    // registration: "example.com",
     tag: "Entertainment",
   },
 ];
