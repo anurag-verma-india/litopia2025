@@ -18,7 +18,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Litopia 2.0",
-  description: "Landing page for litopia 2.0",
+  description:
+    "The biggest and grandest literary fest, the Medi-caps University has ever seen! Litopia 2.0, organized by The Sahityik Club at Medi-Caps University,",
 };
 
 export default function RootLayout({
@@ -35,7 +36,7 @@ export default function RootLayout({
       </Head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-900 min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-zinc-900 antialiased`}
       >
         <ThemeProvider
           attribute="class"
