@@ -161,7 +161,7 @@ export const events = [
   {
     id: 2,
     title: "Detective Game",
-    date: "March 11, 2025",
+    date: "March 12, 2025",
     description:
       "Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test.",
     image: DetectiveImg,
@@ -200,7 +200,7 @@ export const events = [
   {
     id: 6,
     title: "Squid Games",
-    date: "March 12, 2025",
+    date: "March 11, 2025",
     description:
       "Experience the excitement of a gamified version of the hit web series – pure fun guaranteed!",
     image: SquidGameImg,
