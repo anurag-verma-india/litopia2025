@@ -165,6 +165,7 @@ export const events = [
     description:
       "Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test.",
     image: DetectiveImg,
+    registration: "https://konfhub.com/detective-game",
     tag: "Mystery",
   },
   {
@@ -174,6 +175,8 @@ export const events = [
     description:
       "Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked",
     image: AdalatImg,
+    // registration: "https://forms.gle/YFiCC3S8Y7UYiYBt6",
+    registration: "example.com",
     tag: "Drama",
   },
   {
@@ -201,6 +204,7 @@ export const events = [
     description:
       "Experience the excitement of a gamified version of the hit web series – pure fun guaranteed!",
     image: SquidGameImg,
+    registration: "https://konfhub.com/squid-game-47f5c9e2",
     tag: "Adventure",
   },
   {
@@ -210,6 +214,7 @@ export const events = [
     description:
       "Potterheads, this one’s for you! Join a fun-filled trivia session with amazing prizes waiting to be won.",
     image: harryPotterImg,
+    registration: "https://konfhub.com/harry-potter-quiz",
     tag: "Quiz",
   },
   {
@@ -219,6 +224,8 @@ export const events = [
     description:
       "Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience.",
     image: MicDropImg,
+    // registration: "https://forms.gle/BEam3ByEGoZY9vmB8",
+    registration: "example.com",
     tag: "Entertainment",
   },
 ];

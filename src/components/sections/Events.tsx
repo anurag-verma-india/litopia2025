@@ -43,9 +43,18 @@ const EventCard = ({
         <p className="flex-grow text-gray-300">{event.description}</p>
 
         {/* Button */}
-        <button className="mt-4 w-full rounded-lg border border-theme-gold/10 bg-gradient-to-r from-theme-red/20 to-theme-gold/20 px-4 py-2 text-theme-gold transition-all duration-300 hover:from-theme-red/30 hover:to-theme-gold/30">
-          Registrations opening soon
-        </button>
+        {event.registration && (
+          <a href={event.registration} target="_">
+            <button className="mt-4 w-full rounded-lg border border-theme-gold/10 bg-gradient-to-r from-theme-red/20 to-theme-gold/20 px-4 py-2 text-theme-gold transition-all duration-300 hover:from-theme-red/30 hover:to-theme-gold/30">
+              Register Now
+            </button>
+          </a>
+        )}
+        {!event.registration && (
+          <button className="mt-4 w-full rounded-lg border border-theme-gold/10 bg-gradient-to-r from-theme-red/20 to-theme-gold/20 px-4 py-2 text-theme-gold transition-all duration-300 hover:from-theme-red/30 hover:to-theme-gold/30">
+            Registration not required
+          </button>
+        )}
       </div>
     </motion.div>
   );
