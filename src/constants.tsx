@@ -149,53 +149,15 @@ export const tiles = [
 
 export const events = [
   {
-    id: 1,
-    title: "Bookmarked",
+    id: 7,
+    title: "Harry Potter Quiz",
     date: "March 11, 2025",
+    time: "11 AM",
     description:
-      "Meet fellow bibliophiles, dive into discussions about books and authors, and soak in the magic of literature",
-    // image: img,
-    image: BookmarkedImg,
-    tag: "Literature",
-  },
-  {
-    id: 2,
-    title: "Detective Game",
-    date: "March 12, 2025",
-    description:
-      "Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test.",
-    image: DetectiveImg,
-    registration: "https://konfhub.com/detective-game",
-    tag: "Mystery",
-  },
-  {
-    id: 3,
-    title: "Medicaps Ki Aadalat",
-    date: "March 11, 2025",
-    description:
-      "Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked",
-    image: AdalatImg,
-    registration: "https://forms.gle/YFiCC3S8Y7UYiYBt6",
-    // registration: "example.com",
-    tag: "Drama",
-  },
-  {
-    id: 4,
-    title: "The Legacy",
-    date: "March 11, 2025",
-    description:
-      "A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you",
-    image: LegacyImg,
-    tag: "Motivational",
-  },
-  {
-    id: 5,
-    title: "Anvarat",
-    date: "March 12, 2025",
-    description:
-      "Don’t miss the famous theatre group’s incredible performance at the University Auditorium – it’s going to be unforgettable!",
-    image: AnavrattImg,
-    tag: "Theatre",
+      "Potterheads, this one’s for you! Join a fun-filled trivia session with amazing prizes waiting to be won.",
+    image: harryPotterImg,
+    registration: "https://konfhub.com/harry-potter-quiz",
+    tag: "Quiz",
   },
   {
     id: 6,
@@ -208,26 +170,75 @@ export const events = [
     tag: "Adventure",
   },
   {
-    id: 7,
-    title: "Harry Potter Quiz",
-    date: "March 12, 2025",
+    id: 4,
+    title: "The Legacy",
+    date: "March 11, 2025",
+    time: "1 PM to 3 PM",
     description:
-      "Potterheads, this one’s for you! Join a fun-filled trivia session with amazing prizes waiting to be won.",
-    image: harryPotterImg,
-    registration: "https://konfhub.com/harry-potter-quiz",
-    tag: "Quiz",
+      "A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you",
+    image: LegacyImg,
+    tag: "Motivational",
   },
+  {
+    id: 2,
+    title: "Detective Game",
+    date: "March 11, 2025",
+    time: "3 PM to 5 PM",
+    description:
+      "Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test.",
+    image: DetectiveImg,
+    registration: "https://konfhub.com/detective-game",
+    tag: "Mystery",
+  },
+  // -------------------------------- 1 end
+
+  {
+    id: 1,
+    title: "Bookmarked",
+    date: "March 12, 2025",
+    time: "11:30 PM to 1 PM (tentative)",
+    description:
+      "Meet fellow bibliophiles, dive into discussions about books and authors, and soak in the magic of literature",
+    // image: img,
+    image: BookmarkedImg,
+    tag: "Literature",
+  },
+  {
+    id: 5,
+    title: "Anvarat",
+    date: "March 12, 2025",
+    time: "10:30 AM to 11:30 AM",
+    description:
+      "Don’t miss the famous theatre group’s incredible performance at the University Auditorium – it’s going to be unforgettable!",
+    image: AnavrattImg,
+    tag: "Theatre",
+  },
+  {
+    id: 3,
+    title: "Medicaps Ki Aadalat",
+    date: "March 11, 2025",
+    time: "12:30 PM to 2:45 PM",
+    description:
+      "Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked. (Free for audience)",
+    image: AdalatImg,
+    registration: "https://forms.gle/YFiCC3S8Y7UYiYBt6",
+    // registration: "example.com",
+    tag: "Drama",
+  },
+  ,
   {
     id: 8,
     title: "Mic Drop",
     date: "March 12, 2025",
+    time: "3 PM to 5 PM",
     description:
-      "Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience.",
+      "Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience. (Free for audience)",
     image: MicDropImg,
     registration: "https://forms.gle/BEam3ByEGoZY9vmB8",
     // registration: "example.com",
     tag: "Entertainment",
   },
+  // -------------------------------- 2 end
 ];
 
 export const teamMembers = [
