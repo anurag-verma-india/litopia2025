@@ -11,6 +11,7 @@ import AdalatImg from "@/assets/events/adalat.jpeg";
 // import MicDropImg from "@/assets/events/mic-drop.jpeg";
 
 // import AdalatImg from "@/assets/events/";
+import LitMashal from "@/assets/events/poster-lit-mashal.png";
 import AnavrattImg from "@/assets/events/poster-anavrat.png";
 import BookmarkedImg from "@/assets/events/poster-bookmarked.jpeg";
 import DetectiveImg from "@/assets/events/poster-detective-game-v1.1.png";
@@ -73,92 +74,101 @@ export const navigationItems: INavigationItems[] = [
   },
 ];
 
-export const tiles = [
-  {
-    id: 1,
-    text: "Bookmarked",
-    gridArea: { desktop: "speaker", mobile: "a" },
-    emoji: "📚",
-    imageUrl: "",
-    title: "Bookmarked",
-    description:
-      "Meet fellow bibliophiles, dive into discussions about books and authors, and soak in the magic of literature",
-  },
-  {
-    id: 2,
-    text: "Detective Game",
-    gridArea: { desktop: "medicaps", mobile: "b" },
-    emoji: "🔍",
-    imageUrl: "",
-    title: "Detective Game",
-    description:
-      "Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test.",
-  },
-  {
-    id: 3,
-    text: "Medicaps ki Adalat",
-    gridArea: { desktop: "bookmarked", mobile: "c" },
-    emoji: "⚖️",
-    imageUrl: "",
-    title: "Medicaps ki Adalat",
-    description:
-      "Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked",
-  },
-  {
-    id: 4,
-    text: "The Legacy",
-    gridArea: { desktop: "kite", mobile: "d" },
-    emoji: "🎙️",
-    imageUrl: "",
-    title: "The Legacy",
-    description:
-      "A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you",
-  },
-  {
-    id: 5,
-    text: "Anvarat",
-    gridArea: { desktop: "harry", mobile: "e" },
-    emoji: "🎭",
-    imageUrl: "",
-    title: "Anvarat",
-    description:
-      "Don’t miss the famous theatre group’s incredible performance at the University Auditorium – it’s going to be unforgettable!",
-  },
-  {
-    id: 6,
-    text: "Squid Games",
-    gridArea: { desktop: "podcast", mobile: "f" },
-    emoji: "🎧",
-    imageUrl: "",
-    title: "Squid Games",
-    description:
-      "Experience the excitement of a gamified version of the hit web series – pure fun guaranteed!",
-  },
-  {
-    id: 7,
-    text: "Harry Potter Quiz",
-    gridArea: { desktop: "detective", mobile: "g" },
-    emoji: "🪄",
-    imageUrl: "",
-    title: "Harry Potter Quiz",
-    description:
-      "Potterheads, this one’s for you! Join a fun-filled trivia session with amazing prizes waiting to be won.",
-  },
-  {
-    id: 8,
-    text: "Mic Drop",
-    gridArea: { desktop: "mic", mobile: "h" },
-    emoji: "🎤",
-    imageUrl: "",
-    title: "Mic Drop",
-    description:
-      "Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience.",
-  },
-];
+// export const tiles = [
+//   {
+//     id: 1,
+//     text: "Bookmarked",
+//     gridArea: { desktop: "speaker", mobile: "a" },
+//     emoji: "📚",
+//     imageUrl: "",
+//     title: "Bookmarked",
+//     description:
+//       "Meet fellow bibliophiles, dive into discussions about books and authors, and soak in the magic of literature",
+//   },
+//   {
+//     id: 2,
+//     text: "Detective Game",
+//     gridArea: { desktop: "medicaps", mobile: "b" },
+//     emoji: "🔍",
+//     imageUrl: "",
+//     title: "Detective Game",
+//     description:
+//       "Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test.",
+//   },
+//   {
+//     id: 3,
+//     text: "Medicaps ki Adalat",
+//     gridArea: { desktop: "bookmarked", mobile: "c" },
+//     emoji: "⚖️",
+//     imageUrl: "",
+//     title: "Medicaps ki Adalat",
+//     description:
+//       "Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked",
+//   },
+//   {
+//     id: 4,
+//     text: "The Legacy",
+//     gridArea: { desktop: "kite", mobile: "d" },
+//     emoji: "🎙️",
+//     imageUrl: "",
+//     title: "The Legacy",
+//     description:
+//       "A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you",
+//   },
+//   {
+//     id: 5,
+//     text: "Anvarat",
+//     gridArea: { desktop: "harry", mobile: "e" },
+//     emoji: "🎭",
+//     imageUrl: "",
+//     title: "Anvarat",
+//     description:
+//       "Don’t miss the famous theatre group’s incredible performance at the University Auditorium – it’s going to be unforgettable!",
+//   },
+//   {
+//     id: 6,
+//     text: "Squid Games",
+//     gridArea: { desktop: "podcast", mobile: "f" },
+//     emoji: "🎧",
+//     imageUrl: "",
+//     title: "Squid Games",
+//     description:
+//       "Experience the excitement of a gamified version of the hit web series – pure fun guaranteed!",
+//   },
+//   {
+//     id: 7,
+//     text: "Harry Potter Quiz",
+//     gridArea: { desktop: "detective", mobile: "g" },
+//     emoji: "🪄",
+//     imageUrl: "",
+//     title: "Harry Potter Quiz",
+//     description:
+//       "Potterheads, this one’s for you! Join a fun-filled trivia session with amazing prizes waiting to be won.",
+//   },
+//   {
+//     id: 8,
+//     text: "Mic Drop",
+//     gridArea: { desktop: "mic", mobile: "h" },
+//     emoji: "🎤",
+//     imageUrl: "",
+//     title: "Mic Drop",
+//     description:
+//       "Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience.",
+//   },
+// ];
 
 export const events = [
   {
-    id: 7,
+    id: 0,
+    title: "Lit Mashal",
+    date: "March 11, 2025",
+    time: "10 AM",
+    description: "Litopia 2.0 inauguration ceremony",
+    image: LitMashal,
+    tag: "Quiz",
+  },
+  {
+    id: 1,
     title: "Harry Potter Quiz",
     date: "March 11, 2025",
     time: "11 AM",
@@ -169,7 +179,7 @@ export const events = [
     tag: "Quiz",
   },
   {
-    id: 6,
+    id: 2,
     title: "Squid Games",
     date: "March 11, 2025",
     description:
@@ -179,7 +189,7 @@ export const events = [
     tag: "Adventure",
   },
   {
-    id: 4,
+    id: 3,
     title: "The Legacy",
     date: "March 11, 2025",
     time: "1 PM to 3 PM",
@@ -189,7 +199,7 @@ export const events = [
     tag: "Motivational",
   },
   {
-    id: 2,
+    id: 4,
     title: "Detective Game",
     date: "March 11, 2025",
     time: "3 PM to 5 PM",
@@ -202,7 +212,7 @@ export const events = [
   // -------------------------------- 1 end
 
   {
-    id: 1,
+    id: 5,
     title: "Bookmarked",
     date: "March 12, 2025",
     time: "11:30 PM to 1 PM (tentative)",
@@ -213,7 +223,7 @@ export const events = [
     tag: "Literature",
   },
   {
-    id: 5,
+    id: 6,
     title: "Anvarat",
     date: "March 12, 2025",
     time: "10:30 AM to 11:30 AM",
@@ -223,7 +233,7 @@ export const events = [
     tag: "Theatre",
   },
   {
-    id: 3,
+    id: 7,
     title: "Medicaps Ki Aadalat",
     date: "March 11, 2025",
     time: "12:30 PM to 2:45 PM",
