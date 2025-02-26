@@ -13,7 +13,7 @@ import AdalatImg from "@/assets/events/adalat.jpeg";
 // import AdalatImg from "@/assets/events/";
 import AnavrattImg from "@/assets/events/poster-anavrat.png";
 import BookmarkedImg from "@/assets/events/poster-bookmarked.jpeg";
-import DetectiveImg from "@/assets/events/poster-detective-game.png";
+import DetectiveImg from "@/assets/events/poster-detective-game-v1.1.png";
 import harryPotterImg from "@/assets/events/poster-harry-potter-quiz.png";
 import LegacyImg from "@/assets/events/poster-the-legacy.png";
 import SquidGameImg from "@/assets/events/poster-squid-game-v1.0.png";
