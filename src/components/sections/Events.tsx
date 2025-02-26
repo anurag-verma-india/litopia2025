@@ -11,6 +11,7 @@ const EventCard = ({
   event: (typeof events)[0];
   index: number;
 }) => {
+  // console.log("length: ",event?.description.length)
   return (
     <>
       <motion.div
@@ -44,7 +45,15 @@ const EventCard = ({
             <p className="text-sm text-theme-gold/70">{event!.date}</p>
             <p className="text-sm text-theme-gold/70">{event!.time}</p>
           </div>
-          <p className="flex-grow text-gray-300">{event!.description}</p>
+          {/* <p className="flex-grow text-gray-300">{event!.description}</p> */}
+          <p key={1} className="flex-grow text-gray-300">
+            {event?.description.map((eve) => (
+              <div key={1}>
+                {/* {event!.description.} */}
+                {eve}
+              </div>
+            ))}
+          </p>
 
           {/* Button */}
           {event!.registration && (

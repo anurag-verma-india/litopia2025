@@ -163,8 +163,14 @@ export const events = [
     title: "Lit Mashal",
     date: "March 11, 2025",
     time: "10 AM",
-    description: "Litopia 2.0 inauguration ceremony",
+    description: [
+      "There is always light,",
+      "If only were brave enough to see it,",
+      "If only we're brave enough to be it.",
+      "Lit mashal is all about spreading lights and happiness! It will officially kick off Litopia 2.0",
+    ],
     image: LitMashal,
+    registration: "",
     tag: "Quiz",
   },
   {
@@ -173,7 +179,7 @@ export const events = [
     date: "March 11, 2025",
     time: "11 AM",
     description:
-      "Potterheads, this one’s for you! Join a fun-filled trivia session with amazing prizes waiting to be won.",
+      ["Potterheads, this one’s for you! Join a fun-filled trivia session with amazing prizes waiting to be won."],
     image: harryPotterImg,
     registration: "https://konfhub.com/harry-potter-quiz",
     tag: "Quiz",
@@ -183,7 +189,7 @@ export const events = [
     title: "Squid Games",
     date: "March 11, 2025",
     description:
-      "Experience the excitement of a gamified version of the hit web series – pure fun guaranteed!",
+      ["Experience the excitement of a gamified version of the hit web series – pure fun guaranteed!"],
     image: SquidGameImg,
     registration: "https://konfhub.com/squid-game-47f5c9e2",
     tag: "Adventure",
@@ -194,7 +200,7 @@ export const events = [
     date: "March 11, 2025",
     time: "1 PM to 3 PM",
     description:
-      "A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you",
+      ["A powerful session featuring inspiring speakers sharing their experiences and stories to motivate and energize you"],
     image: LegacyImg,
     tag: "Motivational",
   },
@@ -204,7 +210,7 @@ export const events = [
     date: "March 11, 2025",
     time: "3 PM to 5 PM",
     description:
-      "Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test.",
+      ["Step into the shoes of a detective and solve thrilling cases to put your deduction skills to the test."],
     image: DetectiveImg,
     registration: "https://konfhub.com/detective-game",
     tag: "Mystery",
@@ -217,7 +223,7 @@ export const events = [
     date: "March 12, 2025",
     time: "11:30 PM to 1 PM (tentative)",
     description:
-      "Meet fellow bibliophiles, dive into discussions about books and authors, and soak in the magic of literature",
+      ["Meet fellow bibliophiles, dive into discussions about books and authors, and soak in the magic of literature"],
     // image: img,
     image: BookmarkedImg,
     tag: "Literature",
@@ -228,7 +234,7 @@ export const events = [
     date: "March 12, 2025",
     time: "10:30 AM to 11:30 AM",
     description:
-      "Don’t miss the famous theatre group’s incredible performance at the University Auditorium – it’s going to be unforgettable!",
+      ["Don’t miss the famous theatre group’s incredible performance at the University Auditorium – it’s going to be unforgettable!"],
     image: AnavrattImg,
     tag: "Theatre",
   },
@@ -238,7 +244,7 @@ export const events = [
     date: "March 11, 2025",
     time: "12:30 PM to 2:45 PM",
     description:
-      "Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked. (Free for audience)",
+      ["Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked. (Free for audience)"],
     image: AdalatImg,
     registration: "https://forms.gle/YFiCC3S8Y7UYiYBt6",
     // registration: "example.com",
@@ -251,7 +257,7 @@ export const events = [
     date: "March 12, 2025",
     time: "3 PM to 5 PM",
     description:
-      "Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience. (Free for audience)",
+      ["Show off your talent in singing, poetry, or comedy and perform live in front of a cheering audience. (Free for audience)"],
     image: MicDropImg,
     registration: "https://forms.gle/BEam3ByEGoZY9vmB8",
     // registration: "example.com",
