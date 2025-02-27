@@ -241,7 +241,7 @@ export const events = [
   {
     id: 7,
     title: "Medicaps Ki Aadalat",
-    date: "March 11, 2025",
+    date: "March 12, 2025",
     time: "12:30 PM to 2:45 PM",
     description:
       ["Get ready for a heated and entertaining debate session on controversial topics that will keep everyone hooked. (Free for audience)"],
