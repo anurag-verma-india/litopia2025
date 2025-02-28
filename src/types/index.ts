@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import type { FC, SVGProps } from "react";
 
 export interface BenefitProps {
@@ -23,6 +24,7 @@ export interface SocialLinkProps {
 
 export interface Sponsor {
   name: string;
+  image: StaticImageData;
 }
 
 export interface TestimonialProps {

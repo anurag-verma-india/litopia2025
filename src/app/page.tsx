@@ -5,7 +5,8 @@ import { Events } from "../components/sections/Events";
 import { ProfileSection } from "../components/sections/ProfileSection";
 import { TeamSection } from "../components/sections/TeamSection";
 import { Footer } from "../components/Footer";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { Sponsors } from "@/components/sections/Investors";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       {/* <Tiles /> */}
       <ProfileSection />
       <TeamSection />
+      <Sponsors id={"123"} />
       <Footer />
     </div>
   );
