@@ -5,13 +5,13 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Abbas-Dev-786/litopia.git
+git clone https://github.com/anurag-verma-india/litopia2025.git
 ```
 
 2. Install dependencies:
 
 ```bash
-cd litopia
+cd litopia2025
 npm install
 ```
 
@@ -29,24 +29,6 @@ Build for production:
 npm run build
 ```
 
-## 💻 Code Examples
-
-### Component Usage
-
-```tsx
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-
-function HeroSection() {
-  return (
-    <Card className="p-6">
-      <h1 className="text-3xl font-bold">Welcome to Our Landing Page</h1>
-      <p className="mt-2 text-gray-600">Start building something amazing!</p>
-      <Button className="mt-4">Get Started</Button>
-    </Card>
-  );
-}
-```
 
 ## 🛠️ Tech Stack
 
@@ -56,26 +38,6 @@ Our landing page is built with modern frontend technologies:
 - [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) - Type-safe JavaScript
 - [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) - Utility-first CSS framework
 - [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=react&logoColor=white)](https://ui.shadcn.com/) - Re-usable components
-
-## 📊 Project Structure
-
-```
-.
-├── src/
-│   ├── app/
-│   │   ├── fonts/           # Font configurations
-│   │   ├── sections/        # Page sections components
-│   │   │   ├── Faq.tsx
-│   │   │   └── Testimonials.tsx
-│   │   ├── layout.tsx       # Root layout
-│   ├── assets/              # Static assets
-│   ├── components/
-│   │   ├── ui/             # shadcn/ui components
-│   │   │   └── dropdown-menu.tsx
-│   │   └── theme-provider.tsx
-│   ├── lib/               # Utility functions
-│   └── types/             # TypeScript type definitions
-```
 
 ## 🤝 Contributing
 
